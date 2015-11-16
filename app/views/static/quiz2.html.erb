@@ -1,1 +1,14 @@
-quiz2 placeholder
+<p>Now could you provide us with some additional background information about your business?</p>
+
+<%= form_tag("/quiz2") do %>
+    <%= label_tag "average_num_daily_customers", "On average, how many customers do you serve per day?", class: "block_element" %>
+    <%= number_field_tag "average_num_daily_customers", nil, within: 1...100000 %>
+
+    <%= label_tag "most_known_product", "What product are you most known for?", class: "block_element" %>
+    <%= text_field_tag "most_known_product" %>
+
+    <%= label_tag "product_interested_in_selling", "Is there a product that you are interested in selling, but don’t already sell? If yes, what product?", class: "block_element" %>
+    <%= text_field_tag "product_interested_in_selling" %>
+
+    <%= submit_tag "Next", class: "block_element" %>
+<% end %>

@@ -23,14 +23,20 @@ class StaticController < ApplicationController
 
   def quiz1_verify_details
     if request.post?
-      redirect_to action: "matches"
+      redirect_to action: "quiz2"
     end
   end
 
   def quiz2
+    if request.post?
+      redirect_to action: "quiz3"
+    end
   end
 
   def quiz3
+    if request.post?
+      redirect_to action: "matches"
+    end
   end
 
   def matches

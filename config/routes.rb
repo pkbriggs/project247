@@ -20,5 +20,8 @@ Rails.application.routes.draw do
   post 'quiz1_verify_details' => 'static#quiz1_verify_details'
 
   get 'quiz2' => 'static#quiz2'
+  post 'quiz2' => 'static#quiz2'
+
   get 'quiz3' => 'static#quiz3'
+  post 'quiz3' => 'static#quiz3'
 end

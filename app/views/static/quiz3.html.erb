@@ -1,3 +1,73 @@
-quiz3 placeholder
+<p>Please answer the following questions to help us better determine compatible businesses.</p>
 
-<a href="/">View matches</a>
+<%= form_tag("/quiz3") do %>
+    <%= label_tag "community_involvement", "Community involvement is important to my business.", class: "block_element" %>
+    <div>
+      <%= radio_button_tag "community_involvement", "1" %>
+      <%= label_tag "community_involvement_1", "Strongly Disagree" %>
+    </div>
+    <div>
+      <%= radio_button_tag "community_involvement", "2" %>
+      <%= label_tag "community_involvement_2", "Disagree" %>
+    </div>
+    <div>
+      <%= radio_button_tag "community_involvement", "3" %>
+      <%= label_tag "community_involvement_3", "Neutral" %>
+    </div>
+    <div>
+      <%= radio_button_tag "community_involvement", "4" %>
+      <%= label_tag "community_involvement_4", "Agree" %>
+    </div>
+    <div>
+      <%= radio_button_tag "community_involvement", "5" %>
+      <%= label_tag "community_involvement_5", "Strongly Agree" %>
+    </div>
+
+
+    <%= label_tag "biggest_priority", "At the end of the day, profit is the main priority.", class: "block_element" %>
+    <div>
+      <%= radio_button_tag "biggest_priority", "1" %>
+      <%= label_tag "biggest_priority_1", "Strongly Disagree" %>
+    </div>
+    <div>
+      <%= radio_button_tag "biggest_priority", "2" %>
+      <%= label_tag "biggest_priority_2", "Disagree" %>
+    </div>
+    <div>
+      <%= radio_button_tag "biggest_priority", "3" %>
+      <%= label_tag "biggest_priority_3", "Neutral" %>
+    </div>
+    <div>
+      <%= radio_button_tag "biggest_priority", "4" %>
+      <%= label_tag "biggest_priority_4", "Agree" %>
+    </div>
+    <div>
+      <%= radio_button_tag "biggest_priority", "5" %>
+      <%= label_tag "biggest_priority_5", "Strongly Agree" %>
+    </div>
+
+
+    <%= label_tag "customer_satisfaction_importance", "There is nothing more important than customer satisfaction.", class: "block_element" %>
+    <div>
+      <%= radio_button_tag "customer_satisfaction_importance", "1" %>
+      <%= label_tag "customer_satisfaction_importance_1", "Strongly Disagree" %>
+    </div>
+    <div>
+      <%= radio_button_tag "customer_satisfaction_importance", "2" %>
+      <%= label_tag "customer_satisfaction_importance_2", "Disagree" %>
+    </div>
+    <div>
+      <%= radio_button_tag "customer_satisfaction_importance", "3" %>
+      <%= label_tag "customer_satisfaction_importance_3", "Neutral" %>
+    </div>
+    <div>
+      <%= radio_button_tag "customer_satisfaction_importance", "4" %>
+      <%= label_tag "customer_satisfaction_importance_4", "Agree" %>
+    </div>
+    <div>
+      <%= radio_button_tag "customer_satisfaction_importance", "5" %>
+      <%= label_tag "customer_satisfaction_importance_5", "Strongly Agree" %>
+    </div>
+
+    <%= submit_tag "Finish", class: "block_element" %>
+<% end %>
