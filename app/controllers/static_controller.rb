@@ -5,4 +5,10 @@ class StaticController < ApplicationController
   def survey
     @questions = SurveyQuestion.all_questions
   end
+
+  def matches
+  end
+
+  def match_detail
+  end
 end
