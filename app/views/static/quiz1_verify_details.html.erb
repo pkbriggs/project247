@@ -1,0 +1,14 @@
+<p>Great! We used this listing to fill out some basic info for you. Feel free to make any edits, then hit 'Next'.</p>
+
+<%= form_tag("/quiz1_verify_details") do %>
+    <%= label_tag "business_name", "Business Name", class: "block_element" %>
+    <%= text_field_tag "business_name" %>
+
+    <%= label_tag "address", "Address", class: "block_element" %>
+    <%= text_field_tag "address" %>
+
+    <%= label_tag "primary_products", "Primary Products", class: "block_element" %>
+    <%= text_area_tag "primary_products" %>
+
+    <%= submit_tag "Next", class: "block_element" %>
+<% end %>
