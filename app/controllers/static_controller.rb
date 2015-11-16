@@ -7,9 +7,18 @@ class StaticController < ApplicationController
   end
 
   def quiz1_business_name
+    if request.post?
+      session[:business_name] = params["business_name"]
+      redirect_to action: "quiz1_name_matches"
+    end
   end
 
   def quiz1_name_matches
+    if request.get?
+      @business_name = session[:business_name]
+    elsif request.post?
+      redirect_to action: "quiz1_verify_details"
+    end
   end
 
   def quiz1_verify_details

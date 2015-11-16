@@ -1,0 +1,20 @@
+<div class="container">
+<p>Great! We used this listing to fill out some basic info for you. Feel free to make any edits, then hit 'Next'.</p>
+
+<%= form_tag("/quiz1_verify_details") do %>
+  <div class="row">
+    <%= label_tag "business_name" %>
+    <%= text_field_tag "business_name" %>
+  </div>
+
+  <div class="row">
+    <%= label_tag "location" %>
+    <%= text_field_tag "location" %>
+  </div>
+
+  <div class="row">
+    <%= label_tag "primary_products" %>
+    <%= text_field_tag "primary_products" %>
+  </div>
+<% end %>
+</div>
