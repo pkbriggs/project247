@@ -13,5 +13,10 @@ class StaticController < ApplicationController
   end
 
   def quiz3
+
+  def matches
+  end
+
+  def match_detail
   end
 end
