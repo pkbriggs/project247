@@ -4,4 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static#index'
+
+  # Match routes
+  get 'matches' => 'static#matches'
+  get 'match_detail' => 'static#match_detail'
 end
