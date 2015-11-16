@@ -16,6 +16,7 @@ class StaticController < ApplicationController
   end
 
   def matches
+
   end
 
   def match_detail
