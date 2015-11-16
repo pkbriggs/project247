@@ -1,7 +1,26 @@
 /* Styling for match cards*/
 .match_card {
   padding: 10px;
+  padding-top: 0px;
   margin: 10px;
   border: 1px solid #333;
   border-radius: 10px;
+}
+
+/* Styling for campaign cards */
+.campaign_card {
+  padding: 10px;
+  padding-top: 0px;
+  margin: 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+/* General styling */
+section {
+  margin-bottom: 20px;
+}
+
+.spacer {
+    margin-top: 40px;
 }
