@@ -1,3 +1,78 @@
 <div class="container">
-  Dirk is here
+  <div class="row spacer">
+    <div class="col-md-4">
+      <%= image_tag "business.jpg", class: "img-responsive" %>
+    </div>
+    <div class="col-md-8">
+      <h1><%= @business_name %></h1>
+
+      <!-- Contact Information -->
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fa fa-phone"></i>  (972) 313-6910
+        </div>
+
+        <div class="col-md-4">
+          <i class="fa fa-envelope"></i>  contact-me@gmail.com
+        </div>
+
+        <div class="col-md-4">
+          <i class="fa fa-map-marker"></i>  Business Address
+        </div>
+      </div>
+
+      <h3>Most Popular Products</h3>
+      <ul>
+        <li>Product #1</li>
+        <li>Product #2</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Campaign Suggestions -->
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Campaign Suggestions</h3>
+
+      <!-- Thanksgiving campaigns -->
+      <h4>Thanksgiving Themed</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="campaign_card">
+            <h5>Campaign #1</h5>
+            <%= image_tag "thanksgiving.jpg", class: "img-responsive" %>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="campaign_card">
+            <h5>Campaign #2</h5>
+            <%= image_tag "thanksgiving.jpg", class: "img-responsive" %>
+          </div>
+        </div>
+      </div>
+
+      <!-- Holiday campaigns -->
+      <h4>Holiday Themed</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="campaign_card">
+            <h5>Campaign #1</h5>
+            <%= image_tag "christmas.jpg", class: "img-responsive" %>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="campaign_card">
+            <h5>Campaign #2</h5>
+            <%= image_tag "christmas.jpg", class: "img-responsive" %>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="campaign_card">
+            <h5>Campaign #3</h5>
+            <%= image_tag "christmas.jpg", class: "img-responsive" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

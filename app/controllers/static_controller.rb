@@ -44,6 +44,7 @@ class StaticController < ApplicationController
   end
 
   def match_detail
+    @business_name = params[:name]
   end
 
 end
