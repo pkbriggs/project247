@@ -6,7 +6,13 @@ class StaticController < ApplicationController
     @questions = SurveyQuestion.all_questions
   end
 
-  def quiz1
+  def quiz1_business_name
+  end
+
+  def quiz1_name_matches
+  end
+
+  def quiz1_verify_details
   end
 
   def quiz2
