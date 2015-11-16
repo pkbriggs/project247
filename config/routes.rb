@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   # Match routes
   get 'matches' => 'static#matches'
   get 'match_detail' => 'static#match_detail'
+
+  # Quiz routes
+  get 'quiz1' => 'static#quiz1'
+  get 'quiz2' => 'static#quiz2'
+  get 'quiz3' => 'static#quiz3'
 end
