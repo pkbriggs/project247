@@ -1,20 +1,14 @@
-<div class="container">
-<p>Great! We used this listing to fill out some basic info for you. Feel free to make any edits, then hit 'Next'.</p>
+<p>Great! We used this listing to fill out some basic info for you. Feel free to make any edits, then hit 'Finish' to view your matches.</p>
 
 <%= form_tag("/quiz1_verify_details") do %>
-  <div class="row">
-    <%= label_tag "business_name" %>
+    <%= label_tag "business_name", "Business Name", class: "block_element" %>
     <%= text_field_tag "business_name" %>
-  </div>
 
-  <div class="row">
-    <%= label_tag "location" %>
-    <%= text_field_tag "location" %>
-  </div>
+    <%= label_tag "address", "Address", class: "block_element" %>
+    <%= text_field_tag "address" %>
 
-  <div class="row">
-    <%= label_tag "primary_products" %>
-    <%= text_field_tag "primary_products" %>
-  </div>
+    <%= label_tag "primary_products", "Primary Products", class: "block_element" %>
+    <%= text_area_tag "primary_products" %>
+
+    <%= submit_tag "Next", class: "block_element" %>
 <% end %>
-</div>

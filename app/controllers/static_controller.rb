@@ -22,6 +22,9 @@ class StaticController < ApplicationController
   end
 
   def quiz1_verify_details
+    if request.post?
+      redirect_to action: "matches"
+    end
   end
 
   def quiz2
