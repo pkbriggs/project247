@@ -1,43 +1,64 @@
 <div class="row">
+  <!-- First Match -->
   <div class="col-md-4">
     <div class="match_card">
-      <h3>Match #1</h3>
+      <h2>Match #1</h2>
       <h4>Location: Address here</h4>
-      <%= image_tag "map.jpg", class: "img-responsive" %>
-      <h4>Products Sold</h4>
-      <ul>
-        <li>Product #1</li>
-        <li>Product #2</li>
+      <div class="match_card_img_container">
+        <%= image_tag "map.jpg", class: "img-responsive" %>
+        <div class="match_score">87%</div>
+
+        <%= render partial: "static/hover" %>
+      </div>
+
+      <h4>Products Matches</h4>
+      <ul class="list-inline">
+        <li>product #1</li>
+        <li>sweet product #2</li>
       </ul>
-      <a class="btn btn-primary" href="/match_detail?name=Kat%20Chocolates">Learn More</a>
+      <a class="block_element button" href="/match_detail?name=Kat%20Chocolate">Learn More</a>
     </div>
   </div>
+
+  <!-- Second Match -->
   <div class="col-md-4">
     <div class="match_card">
-      <h3>Match #2</h3>
+      <h2>Match #2</h2>
       <h4>Location: Address here</h4>
-      <%= image_tag "map.jpg", class: "img-responsive" %>
-      <h4>Products Sold</h4>
-      <ul>
-        <li>Product #1</li>
-        <li>Product #2</li>
+      <div class="match_card_img_container">
+        <%= image_tag "map.jpg", class: "img-responsive" %>
+        <div class="match_score">80%</div>
+
+        <%= render partial: "static/hover" %>
+      </div>
+
+      <h4>Products Matches</h4>
+      <ul class="list-inline">
+        <li>product #1</li>
+        <li>sweet product #2</li>
       </ul>
-      <a class="btn btn-primary" href="/match_detail?name=Tom's%20Deli">Learn More</a>
+      <a class="block_element button" href="/match_detail?name=Tom's%20Deli">Learn More</a>
     </div>
   </div>
+
+  <!-- Last Match -->
   <div class="col-md-4">
     <div class="match_card">
-      <h3>Match #3</h3>
+      <h2>Match #3</h2>
       <h4>Location: Address here</h4>
-      <%= image_tag "map.jpg", class: "img-responsive" %>
-      <h4>Products Sold</h4>
-      <ul>
-        <li>Product #1</li>
-        <li>Product #2</li>
+      <div class="match_card_img_container">
+        <%= image_tag "map.jpg", class: "img-responsive" %>
+        <div class="match_score">65%</div>
+
+        <%= render partial: "static/hover" %>
+      </div>
+
+      <h4>Products Matches</h4>
+      <ul class="list-inline">
+        <li>product #1</li>
+        <li>sweet product #2</li>
       </ul>
-      <a class="btn btn-primary" href="/match_detail?name=Anne%20Perkins%20-%20Local%20Artist">
-        Learn More
-      </a>
+      <a class="block_element button" href="/match_detail?name=Local%20Artist">Learn More</a>
     </div>
   </div>
 </div>
