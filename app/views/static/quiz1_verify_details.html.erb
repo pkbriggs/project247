@@ -1,14 +1,33 @@
-<p>Great! We used this listing to fill out some basic info for you. Feel free to make any edits, then hit 'Next'.</p>
+<div class="backdrop smaller_backdrop">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="progress_bar">
+        <div class="progress_bar_step active">1</div>
+        <hr class="progress_bar_spacer">
+        <div class="progress_bar_step">2</div>
+        <hr class="progress_bar_spacer">
+        <div class="progress_bar_step">3</div>
+      </div>
+      <div class="progress_bar_step_name serif_text">
+        Basic Information
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= form_tag("/quiz1_verify_details") do %>
-    <%= label_tag "business_name", "Business Name", class: "block_element" %>
-    <%= text_field_tag "business_name" %>
+<div class="main_content_container">
+  <p class="serif_text">Great! We used this listing to fill out some basic info for you. Feel free to make any edits, then hit 'next'.</p>
 
-    <%= label_tag "address", "Address", class: "block_element" %>
-    <%= text_field_tag "address" %>
+  <%= form_tag("/quiz1_verify_details") do %>
+      <%= label_tag "business_name", "Business Name", class: "block_element" %>
+      <%= text_field_tag "business_name", nil, class: "input_field quiz_input_field" %>
 
-    <%= label_tag "primary_products", "Primary Products", class: "block_element" %>
-    <%= text_area_tag "primary_products" %>
+      <%= label_tag "address", "Address", class: "block_element" %>
+      <%= text_field_tag "address", nil, class: "input_field quiz_input_field" %>
 
-    <%= submit_tag "Next", class: "block_element" %>
-<% end %>
+      <%= label_tag "primary_products", "Primary Products", class: "block_element" %>
+      <%= text_area_tag "primary_products", nil, class: "input_field quiz_input_field" %>
+
+      <%= submit_tag "next", class: "block_element button" %>
+  <% end %>
+</div>
