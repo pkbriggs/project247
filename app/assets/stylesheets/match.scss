@@ -1,10 +1,43 @@
 /* Styling for match cards*/
 .match_card {
   padding: 10px;
-  padding-top: 0px;
   margin: 10px;
-  border: 1px solid #333;
-  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  background: #f7f7f7;
+
+  .button {
+    text-align: center;
+    max-width: 160px;
+  }
+}
+
+.match_card_img_container {
+  position: relative;
+}
+
+.match_score {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: #758d9b;
+  opacity: .95;
+  padding: 35px 15px;
+  color: white;
+  font-size: 3em;
+}
+
+.list-inline {
+  margin-bottom: 15px;
+  padding-left: 5px;
+
+  li {
+    background: white;
+    border: 1px solid #758d9b;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+  }
 }
 
 /* Styling for campaign cards */
@@ -23,4 +56,12 @@ section {
 
 .spacer {
     margin-top: 40px;
+}
+
+.text_centered {
+  text-align: center;
+}
+
+.white_text {
+  color: white;
 }
