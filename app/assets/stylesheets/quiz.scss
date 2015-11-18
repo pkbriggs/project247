@@ -1,14 +1,154 @@
+// Generic styles
+.input_field {
+  border-radius: 8px;
+  border: 1px solid rgba(151, 151, 151, 0.47);
+  font-size: 1.0rem;
+}
+
+.quiz_input_field {
+  background-color: #F6F6F6;
+  border: 1px solid #D7D7D7;
+  margin-bottom: 15px;
+}
+
+.button {
+  border: 2px solid #6C8D9B;
+  border-radius: 67px;
+  color: #6C8D9B;
+  padding: 5px 40px;
+  background-color: transparent;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.button.big {
+  padding: 8px 45px;
+  font-size: 1.2em;
+}
+
+.main_content_container {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+label {
+  font-weight: inherit;
+}
+
+
+// Name entry page
+.backdrop {
+  background-image: image-url("newbg.jpg");
+  background-size: cover;
+
+  overflow: hidden; // prevent bootstrap row from going off of page
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.full_page_backdrop {
+  height: 100%;
+}
+
+.overlay_container {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 30px;
+
+  .next_button {
+    margin-left: auto;
+    margin-top: 20px;
+  }
+}
+
+
 // Name match page
 .possible_name_match {
-  display: inline-block;
-  border: 1px solid #333;
-  cursor: pointer;
-  text-decoration: none;
-  color: #333;
+  background-image: image-url("sweet_inspiration.jpg");
+  background-size: cover;
+  height: 400px;
+
+  .possible_name_match_details {
+
+  }
+}
+
+.yes_no_buttons {
+  display: flex;
+  justify-content: center;
+
+  .yes_no_button {
+    font-size: 1.2em;
+    &:first-of-type {
+      margin-right: 5px;
+    }
+
+    &:last-of-type {
+      margin-left: 5px;
+    }
+  }
 }
 
 
 // Detail verification page
+.smaller_backdrop {
+  height: 32%;
+}
+
+.progress_bar {
+  display: flex;
+  align-items: center;
+  padding-top: 50px; // to account for navbar
+
+  .progress_bar_step {
+    font-size: 1.7em;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border: 3px solid white;
+    border-radius: 60px;
+    box-shadow: 0px 2px 2px rgba(30, 30, 30, 0.4);
+    text-shadow: 0px 2px 2px rgba(30, 30, 30, 0.4);
+  }
+
+  .progress_bar_step.active {
+    background-color: rgba(108, 141, 155, 0.65);
+    text-shadow: 0px 2px 2px #586D76;
+  }
+
+  .progress_bar_spacer {
+    // border-bottom: 3px solid white;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    // height: 1.5em;
+    border-width: 3px;
+    border-color: white;
+    box-shadow: 0px 2px 2px rgba(30, 30, 30, 0.4);
+  }
+}
+
+.progress_bar_step_name {
+  display: flex;
+  justify-content: center;
+  font-size: 2.0em;
+  color: white;
+  text-shadow: 0px 2px 2px rgba(30, 30, 30, 0.4);
+  margin-top: 15px;
+}
+
+.radio_button_label {
+  padding-left: 6px;
+}
+
+
 .block_element {
   display: block;
 }
