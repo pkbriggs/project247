@@ -2,26 +2,36 @@
   <!-- First Match -->
   <div class="col-md-4">
     <div class="match_card">
-      <h3>Match #1</h3>
+      <div class="match_card_img_container">
+        <%= image_tag "market_background.jpg", class: "img-responsive" %>
+        <div class="match_score">99%</div>
+      </div>
+      <h2>Match #1</h2>
+
       <blockquote>
         <p>My business philosophy is very similar to...</p>
         <footer>Founder, <cite title="Source Title">Businessman #1</cite></footer>
       </blockquote>
-      <h4>Location: Address here</h4>
-      <a class="btn btn-primary" href="/match_detail?name=Marcelo's%20Pizza">Learn More</a>
+
+      <a class="block_element button" href="/match_detail?name=Marcelo's%20Pizza">Learn More</a>
     </div>
   </div>
 
   <!-- Second Match -->
   <div class="col-md-4">
     <div class="match_card">
-      <h3>Match #3</h3>
+      <div class="match_card_img_container">
+        <%= image_tag "market_background.jpg", class: "img-responsive" %>
+        <div class="match_score">62%</div>
+      </div>
+      <h2>Match #2</h2>
+
       <blockquote>
         <p>We value love, respect, but above all else...</p>
         <footer>Founder, <cite title="Source Title">Businessman #3</cite></footer>
       </blockquote>
-      <h4>Location: Address here</h4>
-      <a class="btn btn-primary" href="/match_detail?name=The%20Castro%20Theater">Learn More</a>
+
+      <a class="block_element button" href="/match_detail?name=The%20Castro%20Theater">Learn More</a>
     </div>
   </div>
 </div>
