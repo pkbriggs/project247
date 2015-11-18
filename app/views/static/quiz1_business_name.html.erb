@@ -1,5 +1,9 @@
-<%= form_tag("/quiz1_business_name") do %>
-  <%= label_tag "business_name", "What is your business's name?", class: "block_element" %>
-  <%= text_field_tag "business_name" %>
-  <%= submit_tag "Next", class: "block_element" %>
-<% end %>
+<div class="backdrop">
+  <div class="row">
+    <%= form_tag("/quiz1_business_name", class: "overlay_container col-md-4 col-md-offset-4") do %>
+      <h2><%= label_tag "business_name", "What is your business's name?", class: "block_element serif_text" %></h2>
+      <%= text_field_tag "business_name", nil, class: "form-control input_field" %>
+      <%= submit_tag "next", class: "block_element button next_button" %>
+    <% end %>
+  </div>
+</div>
