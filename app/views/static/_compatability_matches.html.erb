@@ -2,17 +2,27 @@
   <!-- First and Only Match -->
   <div class="col-md-4">
     <div class="match_card">
-      <h2>Match #1</h2>
-      <h4 >Location: Address here</h4>
-      <h4>Compatible Products</h4>
-      <ol>
-        <!-- Match #1 -->
-        <li>Their Product #1 + My Product #3</li>
+      <div class="match_card_img_container">
+        <%= image_tag "sweet_inspiration_crop.jpg", class: "img-responsive" %>
+        <div class="match_score">93%</div>
 
-        <!-- Match #2 -->
-        <li>Their Product #2 + My Product #1</li>
-      </ol>
-      <a class="btn btn-primary" href="/match_detail?name=Olive's%20Oils">Learn More</a>
+        <%= render partial: "static/hover" %>
+      </div>
+
+      <h2>Match #1</h2>
+
+      <h4>Compatible Products</h4>
+      <ul class="list-inline">
+        <li>my product #1</li>
+        <li class="plus">+</li>
+        <li>their product #2</li>
+      </ul>
+      <ul class="list-inline">
+        <li>my product #3</li>
+        <li class="plus">+</li>
+        <li>their product #1</li>
+      </ul>
+      <a class="block_element button" href="/match_detail?name=Olive's%20Oils">Learn More</a>
     </div>
   </div>
 </div>
