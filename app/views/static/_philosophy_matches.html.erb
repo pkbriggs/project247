@@ -18,12 +18,7 @@
           Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
         </p>
         <div class="yelp_review_container">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star-half"></i>
-          <span class="min_padding_left">(72 Yelp Reviews)</span>
+          <%= render partial: "static/stars", :locals => {:num => 3, :half_present => true} %>
         </div>
       </div>
       <div class="match_card_bottom">
@@ -56,12 +51,7 @@
           Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
         </p>
         <div class="yelp_review_container">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star-half"></i>
-          <span class="min_padding_left">(72 Yelp Reviews)</span>
+          <%= render partial: "static/stars", :locals => {:num => 4, :half_present => false} %>
         </div>
       </div>
       <div class="match_card_bottom">
