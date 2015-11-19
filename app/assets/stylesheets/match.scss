@@ -18,6 +18,10 @@
   h4 {
     opacity: 0.7;
   }
+
+  .top_header {
+    margin-top: 10px;
+  }
 }
 
 .match_card_img_container {
@@ -73,7 +77,7 @@
     margin-bottom: 5px;
   }
 
-  .reason, .plus {
+  .reason, .plus, .number, .email, .address {
     border: none;
     background: inherit;
   }
@@ -83,13 +87,39 @@
   margin-bottom: 5px;
 }
 
+/* Styling for match detail page */
+
+.circle {
+  height: 250px;
+  width: 250px;
+  border-radius: 250px;
+  margin-top: 20px;
+}
+
+.match_detail {
+  margin-bottom: 0px;
+}
+
+.separator {
+  background-color: #e7e7e7;
+  height: 2px;
+  width: 100%;
+  margin: 15px auto;
+  display: block;
+}
+
 /* Styling for campaign cards */
 .campaign_card {
   padding: 10px;
   padding-top: 0px;
   margin: 10px;
-  border: 1px solid #333;
-  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 2px;
+  background: #f7f7f7;
+
+  .top_header {
+    margin-top: 5px;
+  }
 }
 
 /* General styling */
@@ -98,7 +128,11 @@ section {
 }
 
 .spacer {
-    margin-top: 40px;
+  margin-top: 40px;
+}
+
+.spacer_large {
+  margin-top: 70px;
 }
 
 .text_centered {

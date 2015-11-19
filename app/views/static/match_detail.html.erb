@@ -1,30 +1,45 @@
 <div class="container">
-  <div class="row spacer">
-    <div class="col-md-4">
-      <%= image_tag "business.jpg", class: "img-responsive" %>
+  <div class="row spacer_large">
+    <div class="col-md-3">
+      <%= image_tag "business.jpg", class: "img-responsive circle" %>
     </div>
-    <div class="col-md-8">
-      <h1><%= @business_name %></h1>
+    <div class="col-md-9">
+      <h1 class="serif_font"><%= @business_name %></h1>
 
-      <!-- Contact Information -->
+      <!-- Address Information -->
       <div class="row">
-        <div class="col-md-4">
-          <i class="fa fa-phone"></i>  (972) 313-6910
-        </div>
-
-        <div class="col-md-4">
-          <i class="fa fa-envelope"></i>  contact-me@gmail.com
-        </div>
-
-        <div class="col-md-4">
-          <i class="fa fa-map-marker"></i>  Business Address
+        <div class="col-md-12">
+          <ul class="list-inline match_detail">
+              <li class="address"><i class="fa fa-map-marker"></i></li>
+              <li class="address">650 Mayfield Avenue, Stanford CA 94305</li>
+          </ul>
         </div>
       </div>
 
-      <h3>Most Popular Products</h3>
-      <ul>
-        <li>Product #1</li>
-        <li>Product #2</li>
+      <!-- Phone Information -->
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-inline match_detail">
+              <li class="number"><i class="fa fa-phone"></i></li>
+              <li class="number">(972) 313-6910</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Email Information -->
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-inline match_detail">
+              <li class="email"><i class="fa fa-map-marker"></i></li>
+              <li class="email">contact-me@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 class="serif_text"><b>Popular Products</b></h4>
+      <ul class="list-inline">
+        <li>dank product #1</li>
+        <li>product #2</li>
       </ul>
     </div>
   </div>
@@ -32,47 +47,18 @@
   <!-- Campaign Suggestions -->
   <div class="row">
     <div class="col-md-12">
-      <h3>Campaign Suggestions</h3>
+      <div class="separator spacer"></div>
 
-      <!-- Thanksgiving campaigns -->
-      <h4>Thanksgiving Themed</h4>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="campaign_card">
-            <h5>Campaign #1</h5>
-            <%= image_tag "thanksgiving.jpg", class: "img-responsive" %>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="campaign_card">
-            <h5>Campaign #2</h5>
-            <%= image_tag "thanksgiving.jpg", class: "img-responsive" %>
-          </div>
-        </div>
-      </div>
+      <!-- Top Campaigns Suggestions -->
+      <h2 class="serif_text">Campaign Suggestions</h2>
+      <%= render partial: "static/top_campaigns" %>
+
+      <div class="separator spacer"></div>
 
       <!-- Holiday campaigns -->
-      <h4>Holiday Themed</h4>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="campaign_card">
-            <h5>Campaign #1</h5>
-            <%= image_tag "christmas.jpg", class: "img-responsive" %>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="campaign_card">
-            <h5>Campaign #2</h5>
-            <%= image_tag "christmas.jpg", class: "img-responsive" %>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="campaign_card">
-            <h5>Campaign #3</h5>
-            <%= image_tag "christmas.jpg", class: "img-responsive" %>
-          </div>
-        </div>
-      </div>
+      <h2 class="serif_text">Holiday Themed Campaigns</h2>
+      <%= render partial: "static/holiday_campaigns" %>
+
     </div>
   </div>
 </div>
