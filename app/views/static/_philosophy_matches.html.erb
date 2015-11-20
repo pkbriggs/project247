@@ -4,18 +4,31 @@
     <div class="match_card">
       <div class="match_card_img_container">
         <%= image_tag "market_background.jpg", class: "img-responsive" %>
-        <div class="match_score">99%</div>
-
-        <%= render partial: "static/hover" %>
       </div>
-      <h2>Match #1</h2>
 
-      <blockquote>
-        <p>My business philosophy is very similar to...</p>
-        <footer>Founder, <cite title="Source Title">Businessman #1</cite></footer>
-      </blockquote>
+      <div class="match_card_content">
+        <h1 class="serif_text top_header no_margin_bottom"><b>Match #1</b></h1>
+        <ul class="list-inline match_card_content_detail">
+          <li class="no_padding_left match_percent olive_text">98% Match</li>
+          <li class="address no_padding_right olive_text"><i class="fa fa-map-marker"></i></li>
+          <li class="address no_padding_left olive_text">4.2mi</li>
+          <%= render partial: "static/hover" %>
+        </ul>
+        <p>
+          Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
+        </p>
+        <div class="yelp_review_container">
+          <%= render partial: "static/stars", :locals => {:num => 3, :half_present => true} %>
+        </div>
+      </div>
+      <div class="match_card_bottom">
+        <blockquote>
+          <p>My business philosophy is very similar to...</p>
+          <footer>Founder, <cite title="Source Title">Businessman #1</cite></footer>
+        </blockquote>
 
-      <a class="block_element button" href="/match_detail?name=Marcelo's%20Pizza">Learn More</a>
+        <a class="block_element button" href="/match_detail?name=Marcelo's%20Pizza">Learn More</a>
+      </div>
     </div>
   </div>
 
@@ -24,18 +37,31 @@
     <div class="match_card">
       <div class="match_card_img_container">
         <%= image_tag "market_background.jpg", class: "img-responsive" %>
-        <div class="match_score">62%</div>
-
-        <%= render partial: "static/hover" %>
       </div>
-      <h2>Match #2</h2>
 
-      <blockquote>
-        <p>We value love, respect, but above all else...</p>
-        <footer>Founder, <cite title="Source Title">Businessman #3</cite></footer>
-      </blockquote>
+      <div class="match_card_content">
+        <h1 class="serif_text top_header no_margin_bottom"><b>Match #2</b></h1>
+        <ul class="list-inline match_card_content_detail">
+          <li class="no_padding_left match_percent olive_text">98% Match</li>
+          <li class="address no_padding_right olive_text"><i class="fa fa-map-marker"></i></li>
+          <li class="address no_padding_left olive_text">4.2mi</li>
+          <%= render partial: "static/hover" %>
+        </ul>
+        <p>
+          Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
+        </p>
+        <div class="yelp_review_container">
+          <%= render partial: "static/stars", :locals => {:num => 4, :half_present => false} %>
+        </div>
+      </div>
+      <div class="match_card_bottom">
+        <blockquote>
+          <p>My business philosophy is very similar to...</p>
+          <footer>Founder, <cite title="Source Title">Businessman #1</cite></footer>
+        </blockquote>
 
-      <a class="block_element button" href="/match_detail?name=The%20Castro%20Theater">Learn More</a>
+        <a class="block_element button" href="/match_detail?name=Castro%20Theater">Learn More</a>
+      </div>
     </div>
   </div>
 </div>

@@ -2,63 +2,66 @@
   <!-- First Match -->
   <div class="col-md-4">
     <div class="match_card">
-      <h2>Match #1</h2>
-      <h4>Location: Address here</h4>
       <div class="match_card_img_container">
         <%= image_tag "map.jpg", class: "img-responsive" %>
-        <div class="match_score">87%</div>
-
-        <%= render partial: "static/hover" %>
       </div>
 
-      <h4>Products Matches</h4>
-      <ul class="list-inline">
-        <li>product #1</li>
-        <li>sweet product #2</li>
-      </ul>
-      <a class="block_element button" href="/match_detail?name=Kat%20Chocolate">Learn More</a>
+      <div class="match_card_content">
+        <h1 class="serif_text top_header no_margin_bottom"><b>Match #1</b></h1>
+        <ul class="list-inline match_card_content_detail">
+          <li class="no_padding_left match_percent olive_text">98% Match</li>
+          <li class="address no_padding_right olive_text"><i class="fa fa-map-marker"></i></li>
+          <li class="address no_padding_left olive_text">4.2mi</li>
+          <%= render partial: "static/hover" %>
+        </ul>
+        <p>
+          Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
+        </p>
+        <div class="yelp_review_container">
+          <%= render partial: "static/stars", :locals => {:num => 4, :half_present => false} %>
+        </div>
+      </div>
+      <div class="match_card_bottom">
+        <h4>Products Matches</h4>
+        <ul class="list-inline">
+          <li>product #1</li>
+          <li>cool product #2</li>
+        </ul>
+        <a class="block_element button" href="/match_detail?name=Kat's%20Chocolates">Learn More</a>
+      </div>
     </div>
   </div>
 
   <!-- Second Match -->
   <div class="col-md-4">
     <div class="match_card">
-      <h2>Match #2</h2>
-      <h4>Location: Address here</h4>
       <div class="match_card_img_container">
         <%= image_tag "map.jpg", class: "img-responsive" %>
-        <div class="match_score">80%</div>
-
-        <%= render partial: "static/hover" %>
       </div>
 
-      <h4>Products Matches</h4>
-      <ul class="list-inline">
-        <li>product #1</li>
-        <li>sweet product #2</li>
-      </ul>
-      <a class="block_element button" href="/match_detail?name=Tom's%20Deli">Learn More</a>
-    </div>
-  </div>
-
-  <!-- Last Match -->
-  <div class="col-md-4">
-    <div class="match_card">
-      <h2>Match #3</h2>
-      <h4>Location: Address here</h4>
-      <div class="match_card_img_container">
-        <%= image_tag "map.jpg", class: "img-responsive" %>
-        <div class="match_score">65%</div>
-
-        <%= render partial: "static/hover" %>
+      <div class="match_card_content">
+        <h1 class="serif_text top_header no_margin_bottom"><b>Match #2</b></h1>
+        <ul class="list-inline match_card_content_detail">
+          <li class="no_padding_left match_percent olive_text">98% Match</li>
+          <li class="address no_padding_right olive_text"><i class="fa fa-map-marker"></i></li>
+          <li class="address no_padding_left olive_text">4.2mi</li>
+          <%= render partial: "static/hover" %>
+        </ul>
+        <p>
+          Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
+        </p>
+        <div class="yelp_review_container">
+          <%= render partial: "static/stars", :locals => {:num => 3, :half_present => true} %>
+        </div>
       </div>
-
-      <h4>Products Matches</h4>
-      <ul class="list-inline">
-        <li>product #1</li>
-        <li>sweet product #2</li>
-      </ul>
-      <a class="block_element button" href="/match_detail?name=Local%20Artist">Learn More</a>
+      <div class="match_card_bottom">
+        <h4>Products Matches</h4>
+        <ul class="list-inline">
+          <li>product #1</li>
+          <li>cool product #2</li>
+        </ul>
+        <a class="block_element button" href="/match_detail?name=Bob's%20Bakery">Learn More</a>
+      </div>
     </div>
   </div>
 </div>
