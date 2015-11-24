@@ -215,6 +215,15 @@
   margin-top: 50px;
   box-shadow: 0px 2px 2px #e2e2e2;
 
+  .flex {
+    display: flex;
+  }
+
+  .business_img {
+    background: url("business.jpg");
+    background-size: cover;
+    width: 100%;
+  }
   .content {
     padding: 15px;
   }
@@ -231,7 +240,6 @@
   }
 
   .bottom_container {
-    height: 100%;
     background: #fbfbfb;
     padding: 3px 20px;
   }
@@ -419,11 +427,15 @@ section {
     margin-top: 10px;
 
     h1 {
-      margin-top: 10px !important;
+      margin-top: 45px !important;
+    }
+
+    .business_img {
+      background-image: none;
     }
 
     .content {
-      padding: 5px;
+      padding: 15px;
     }
 
     .set_height {
@@ -439,12 +451,8 @@ section {
       margin: 5px 0px;
     }
 
-    .no_padding_right {
-      padding-right: 15px !important;
-    }
-
-    .no_padding_left {
-      padding-left: 15px !important;
+    .no_padding_right, .no_padding_left {
+      padding: -15px 0px !important;
     }
 
     .no_padding_top {
