@@ -20,12 +20,16 @@ html, body, div, span, p {
   font-family: "Source Sans Pro", sans-serif;
   color: #4E5848;
   font-size: 16px;
-  // line-height: 1.53em;
-  line-height: 25px;
+  line-height: 1.2em;
+  // line-height: 25px;
 }
 
 .serif_text {
   font-family: 'Alegreya', serif;
+}
+
+.serif_header_text {
+  font-family: 'Yeseva One', cursive;
 }
 
 .cursive_text {
@@ -34,6 +38,14 @@ html, body, div, span, p {
 
 .no_margin_top {
   margin-top: 0;
+}
+
+.normal_font_size {
+  font-size: 1.0em;
+}
+
+.smaller_font_size {
+  font-size: 0.9em;
 }
 
 .small_margin_bottom {
@@ -57,4 +69,12 @@ html, body, div, span, p {
   background-color: rgba(150, 180, 129, 0.83);
   box-shadow: 0px 1px 2px rgba(20, 20, 20, 0.22);
   border-radius: 0px;
+}
+
+.smaller_backdrop {
+  height: 25%;
+
+  .backdrop_header_text {
+    padding-top: 50px; // to account for navbar
+  }
 }
