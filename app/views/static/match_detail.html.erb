@@ -1,40 +1,51 @@
+<div class="inner_match_page_top_container">
+  <div class="row no_margin_left no_margin_right">
+    <div class="col-md-4 no_padding_left">
+      <%= image_tag "business.jpg", class: "img-responsive" %>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="serif_text no_margin_bottom"><%= @business_name %></h1>
+
+          <!-- Address Information -->
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-inline match_detail">
+                  <li class="address address_icon"><i class="fa fa-map-marker"></i></li>
+                  <li class="address address_text">650 Mayfield Avenue, Stanford CA 94305</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phone and Address Information -->
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-inline match_detail">
+                  <li class="phone phone_icon"><i class="fa fa-phone"></i></li>
+                  <li class="phone phone_text">(972) 313-6910</li>
+                  <li class="email email_icon"><i class="fa fa-envelope"></i></li>
+                  <li class="email email_text">contact-me@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <a class="block_element button spacer" href="#">Contact</a>
+        </div>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo ante, bibendum at ipsum a, bibendum dictum felis.</p>
+      <div class="yelp_review_container">
+        <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="row spacer_large">
-    <div class="col-md-3">
-      <%= image_tag "business.jpg", class: "img-responsive circle" %>
-    </div>
     <div class="col-md-9">
-      <h1 class="serif_font"><%= @business_name %></h1>
-
-      <!-- Address Information -->
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="list-inline match_detail">
-              <li class="address"><i class="fa fa-map-marker"></i></li>
-              <li class="address">650 Mayfield Avenue, Stanford CA 94305</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Phone Information -->
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="list-inline match_detail">
-              <li class="phone"><i class="fa fa-phone"></i></li>
-              <li class="phone">(972) 313-6910</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Email Information -->
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="list-inline match_detail">
-              <li class="email"><i class="fa fa-map-marker"></i></li>
-              <li class="email">contact-me@gmail.com</li>
-          </ul>
-        </div>
-      </div>
 
       <h4 class="serif_text"><b>Popular Products</b></h4>
       <ul class="list-inline">
