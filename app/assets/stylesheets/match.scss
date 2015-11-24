@@ -204,6 +204,23 @@
     border-width: 2px;
     font-size: 0.65em;
   }
+
+  .email_text, .address_text {
+    padding-left: 2px;
+  }
+
+  .email_icon, .phone_icon, .address_icon {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .phone_icon {
+    padding-right: 0px;
+  }
+
+  .phone_text {
+    padding-left: 0px;
+  }
 }
 
 .reason_line {
@@ -219,6 +236,16 @@
 }
 
 /* Styling for match detail page */
+
+.inner_match_page_top_container {
+  margin-top: 50px;
+
+  .button {
+    text-align: center;
+    max-width: 160px;
+    margin: 5px 0px;
+  }
+}
 
 .circle {
   height: 250px;
@@ -292,6 +319,14 @@ section {
 
 .no_margin_bottom {
   margin-bottom: 0px;
+}
+
+.no_margin_right {
+  margin-right: 0px;
+}
+
+.no_margin_left {
+  margin-left: 0px;
 }
 
 .min_padding_left {
