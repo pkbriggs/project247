@@ -41,6 +41,7 @@ html, body, div, span, p {
 }
 
 .content_container {
+  overflow-x: hidden;
   height: 100%;
   // padding-top: 50px; // height of the navbar
 }
