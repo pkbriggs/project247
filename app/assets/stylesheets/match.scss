@@ -198,6 +198,23 @@
   .phone_text {
     padding-left: 0px;
   }
+
+  .email_text, .address_text {
+    padding-left: 2px;
+  }
+
+  .email_icon, .phone_icon, .address_icon {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .phone_icon {
+    padding-right: 0px;
+  }
+
+  .phone_text {
+    padding-left: 0px;
+  }
 }
 
 .reason_line {
