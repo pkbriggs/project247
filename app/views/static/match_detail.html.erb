@@ -1,12 +1,13 @@
 <div class="inner_match_page_top_container">
-  <div class="row no_margin_left no_margin_right">
-    <div class="col-md-4 no_padding_left">
-      <%= image_tag "business.jpg", class: "img-responsive" %>
+  <div class="row">
+    <div class="col-md-4 col-sm-12 no_padding_right set_height">
+      <%= image_tag "business.jpg", class: "img-responsive set_height" %>
     </div>
-    <div class="col-md-8">
-      <div class="row">
+    <div class="col-md-8 col-sm-12 no_padding_left set_height">
+
+      <div class="row content no_padding_bottom">
         <div class="col-md-8">
-          <h1 class="serif_text no_margin_bottom"><%= @business_name %></h1>
+          <h1 class="no_margin_bottom no_margin_top serif_header_text"><%= @business_name %></h1>
 
           <!-- Address Information -->
           <div class="row">
@@ -31,17 +32,16 @@
           </div>
         </div>
         <div class="col-md-4">
-          <a class="block_element button spacer" href="#">Contact</a>
+          <a class="block_element button" href="#">contact</a>
         </div>
       </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo ante, bibendum at ipsum a, bibendum dictum felis.</p>
-      <div class="yelp_review_container">
-        <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
+      <div class="content no_padding_top">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo ante, bibendum at ipsum a, bibendum dictum felis.</p>
+        <div class="yelp_review_container">
+          <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
 <div class="container">
   <div class="row spacer_large">
@@ -54,12 +54,12 @@
       </ul>
     </div>
   </div>
+</div>
 
+<div class="container spacer_small">
   <!-- Campaign Suggestions -->
   <div class="row small_margin_bottom">
     <div class="col-md-12">
-      <div class="separator spacer"></div>
-
       <!-- Top Campaigns Suggestions -->
       <h2 class="serif_text">Campaign Suggestions</h2>
       <%= render partial: "static/top_campaigns" %>
