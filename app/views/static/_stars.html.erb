@@ -1,10 +1,10 @@
 <% for i in 1..num %>
-  <i class="fa fa-star"></i>
+  <i class="fa fa-star star"></i>
 <% end %>
 
 <% if half_present %>
-  <i class="fa fa-star-half"></i>
+  <i class="fa fa-star-half star"></i>
 <% end %>
 
 <% random = rand(100) %>
-<span class="min_padding_left">(<%= random %> Yelp Reviews)</span>
+<span class="star_label serif_text">(<%= random %> Yelp Reviews)</span>
