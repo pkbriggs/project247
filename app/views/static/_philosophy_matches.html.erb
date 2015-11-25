@@ -1,18 +1,18 @@
 <div class="row">
   <!-- First Match -->
   <div class="col-md-4">
-    <div class="match_card">
+    <a class="match_card" href="/match_detail?match=1">
       <div class="match_card_img_container">
         <%= image_tag "market_background.jpg", class: "img-responsive" %>
       </div>
 
       <div class="match_card_content">
-        <h1 class="serif_text top_header no_margin_bottom"><b>Match #1</b></h1>
+        <h1 class="serif_text top_header no_margin_bottom"><b><%= session[:top_matches_1_name] %></b></h1>
         <ul class="list-inline match_card_content_detail">
           <li class="no_padding_left match_percent olive_text">98% Match</li>
           <li class="address no_padding_right olive_text"><i class="fa fa-map-marker"></i></li>
           <li class="address no_padding_left olive_text">4.2mi</li>
-          <%= render partial: "static/hover" %>
+          <%= render partial: "static/hover", :locals => {:match_num => 1} %>
         </ul>
         <p>
           Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
@@ -27,25 +27,25 @@
           <footer>Founder, <cite title="Source Title">Businessman #1</cite></footer>
         </blockquote>
 
-        <a class="block_element button" href="/match_detail?name=Marcelo's%20Pizza">Learn More</a>
+        <!-- <a class="block_element button" href="/match_detail?name=Marcelo's%20Pizza">Learn More</a> -->
       </div>
-    </div>
+    </a>
   </div>
 
   <!-- Second Match -->
   <div class="col-md-4">
-    <div class="match_card">
+    <a class="match_card" href="/match_detail">
       <div class="match_card_img_container">
         <%= image_tag "market_background.jpg", class: "img-responsive" %>
       </div>
 
       <div class="match_card_content">
-        <h1 class="serif_text top_header no_margin_bottom"><b>Match #2</b></h1>
+        <h1 class="serif_text top_header no_margin_bottom"><b><%= session[:top_matches_2_name] %></b></h1>
         <ul class="list-inline match_card_content_detail">
           <li class="no_padding_left match_percent olive_text">98% Match</li>
           <li class="address no_padding_right olive_text"><i class="fa fa-map-marker"></i></li>
           <li class="address no_padding_left olive_text">4.2mi</li>
-          <%= render partial: "static/hover" %>
+          <%= render partial: "static/hover", :locals => {:match_num => 2} %>
         </ul>
         <p>
           Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
@@ -60,8 +60,8 @@
           <footer>Founder, <cite title="Source Title">Businessman #1</cite></footer>
         </blockquote>
 
-        <a class="block_element button" href="/match_detail?name=Castro%20Theater">Learn More</a>
+        <!-- <a class="block_element button" href="/match_detail?name=Castro%20Theater">Learn More</a> -->
       </div>
-    </div>
+    </a>
   </div>
 </div>

@@ -6,15 +6,15 @@
       <div class="possible_name_match">
         <div class="possible_name_match_detail_container">
           <div class="possible_name_match_details">
-            <h2 class="possible_name_match_name serif_text">Sweet Inspiration</h2>
-            <p class="possible_name_match_address">555 Main Street, San Francisco, CA, 92301</p>
+            <h2 class="possible_name_match_name serif_text"><%= session[:possible_match_name] %></h2>
+            <p class="possible_name_match_address"><%= session[:possible_match_address] %></p>
           </div>
         </div>
       </div>
 
       <div class="yes_no_buttons">
-        <%= link_to "no", "/quiz1_name_matches", method: :post, class: "yes_no_button button big" %>
-        <%= link_to "yes", "/quiz1_name_matches", method: :post, class: "yes_no_button button big" %>
+        <%= link_to "no", "/quiz1_name_matches?match=no", method: :post, class: "yes_no_button button big" %>
+        <%= link_to "yes", "/quiz1_name_matches?match=yes", method: :post, class: "yes_no_button button big" %>
       </div>
 
     </div>

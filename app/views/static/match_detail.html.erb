@@ -4,7 +4,7 @@
       <%= image_tag "business.jpg", class: "img-responsive circle" %>
     </div>
     <div class="col-md-9">
-      <h1 class="serif_font"><%= @business_name %></h1>
+      <h1 class="serif_font"><%= session["top_matches_#{@match_number}_name"] %></h1>
 
       <!-- Address Information -->
       <div class="row">
@@ -38,8 +38,8 @@
 
       <h4 class="serif_text"><b>Popular Products</b></h4>
       <ul class="list-inline">
-        <li>dank product #1</li>
-        <li>product #2</li>
+        <li><%= session["top_matches_#{@match_number}_product_match_1"] %></li>
+        <li><%= session["top_matches_#{@match_number}_product_match_2"] %></li>
       </ul>
     </div>
   </div>

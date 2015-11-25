@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static#index'
 
+  get 'seed_data' => "static#seed_data"
+  post 'seed_data' => "static#seed_data"
+
   # Matches and Match Detail routes
   get 'matches' => 'static#matches'
   get 'match_detail' => 'static#match_detail'

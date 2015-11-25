@@ -14,6 +14,23 @@
   min-width: 200px;
 }
 
+.tagit {
+  border-radius: 8px !important;
+  border: 1px solid rgba(151, 151, 151, 0.47) !important;
+  font-size: 1.0rem !important;
+
+  background: #F6F6F6 !important;
+  border: 1px solid #E6E6E6 !important;
+  margin-bottom: 15px !important;
+  padding: 8px 10px !important;
+  width: 50% !important;
+  min-width: 200px !important;
+
+  input {
+    background: blue;
+  }
+}
+
 .big_field {
   width: 60%;
   min-height: 120px;
@@ -182,7 +199,7 @@ label {
   font-size: 2.0em;
   color: white;
   text-shadow: 0px 2px 2px rgba(30, 30, 30, 0.4);
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .radio_button_label {
@@ -192,4 +209,27 @@ label {
 
 .block_element {
   display: block;
+}
+
+// Seed data styling
+.form_section_header {
+  font-size: 1.2em;
+  border-bottom: 1px solid #D2D2D2;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+
+  &:first-of-type {
+    margin-top: 10px;
+  }
+}
+
+.form_subsection_header {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  &:first-of-type {
+    margin-top: 0px;
+  }
 }

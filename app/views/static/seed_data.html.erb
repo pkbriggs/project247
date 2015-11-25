@@ -1,0 +1,92 @@
+<div class="backdrop smaller_backdrop">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1 class="cursive_text text_centered white_text backdrop_header_text">
+        Seed Data
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="main_content_container col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+  <p class="serif_text">Enter the appropriate details below for the business owner you would like to interview.</p>
+
+  <%= form_tag("/seed_data") do %>
+    <div class="form_section_header">"Is this your business?" suggestion</div>
+    <%= label_tag "possible_match_name", "Name of the possible match", class: "block_element" %>
+    <%= text_field_tag "possible_match_name", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "possible_match_address", "Address of the possible match", class: "block_element" %>
+    <%= text_field_tag "possible_match_address", nil, class: "input_field quiz_input_field" %>
+
+    <div class="form_section_header">Matches</div>
+
+    <div class="form_subsection_header serif_text">Match #1</div>
+    <%= label_tag "top_matches_1_name", "Business name", class: "block_element" %>
+    <%= text_field_tag "top_matches_1_name", nil, class: "input_field quiz_input_field" %>
+
+    <%# label_tag "top_matches_1_distance", "Distance to business (in miles)", class: "block_element" %>
+    <%# text_field_tag "top_matches_1_distance", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_1_product_match_1", "Product match #1", class: "block_element" %>
+    <%= text_field_tag "top_matches_1_product_match_1", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_1_product_match_2", "Product match #2", class: "block_element" %>
+    <%= text_field_tag "top_matches_1_product_match_2", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_1_match_reason_1", "Match reason #1 (leave blank for generic reason)", class: "block_element" %>
+    <%= text_field_tag "top_matches_1_match_reason_1", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_1_match_reason_2", "Match reason #2 (leave blank for generic reason)", class: "block_element" %>
+    <%= text_field_tag "top_matches_1_match_reason_2", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_1_match_reason_3", "Match reason #3 (leave blank for generic reason)", class: "block_element" %>
+    <%= text_field_tag "top_matches_1_match_reason_3", nil, class: "input_field quiz_input_field" %>
+
+    <div class="form_subsection_header serif_text">Match #2</div>
+    <%= label_tag "top_matches_2_name", "Business name", class: "block_element" %>
+    <%= text_field_tag "top_matches_2_name", nil, class: "input_field quiz_input_field" %>
+
+    <%# label_tag "top_matches_2_distance", "Distance to business (in miles)", class: "block_element" %>
+    <%# text_field_tag "top_matches_2_distance", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_2_product_match_1", "Product match #1", class: "block_element" %>
+    <%= text_field_tag "top_matches_2_product_match_1", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_2_product_match_2", "Product match #2", class: "block_element" %>
+    <%= text_field_tag "top_matches_2_product_match_2", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_2_match_reason_1", "Match reason #1 (leave blank for generic reason)", class: "block_element" %>
+    <%= text_field_tag "top_matches_2_match_reason_1", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_2_match_reason_2", "Match reason #2 (leave blank for generic reason)", class: "block_element" %>
+    <%= text_field_tag "top_matches_2_match_reason_2", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_2_match_reason_3", "Match reason #3 (leave blank for generic reason)", class: "block_element" %>
+    <%= text_field_tag "top_matches_2_match_reason_3", nil, class: "input_field quiz_input_field" %>
+
+    <div class="form_subsection_header serif_text">Match #3</div>
+    <%= label_tag "top_matches_3_name", "Business name", class: "block_element" %>
+    <%= text_field_tag "top_matches_3_name", nil, class: "input_field quiz_input_field" %>
+
+    <%# label_tag "top_matches_3_distance", "Distance to business (in miles)", class: "block_element" %>
+    <%# text_field_tag "top_matches_3_distance", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_3_product_match_1", "Product match #1", class: "block_element" %>
+    <%= text_field_tag "top_matches_3_product_match_1", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_3_product_match_2", "Product match #2", class: "block_element" %>
+    <%= text_field_tag "top_matches_3_product_match_2", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_3_match_reason_1", "Match reason #1 (leave blank for generic reason)", class: "block_element" %>
+    <%= text_field_tag "top_matches_3_match_reason_1", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_3_match_reason_2", "Match reason #2 (leave blank for generic reason)", class: "block_element" %>
+    <%= text_field_tag "top_matches_3_match_reason_2", nil, class: "input_field quiz_input_field" %>
+
+    <%= label_tag "top_matches_3_match_reason_3", "Match reason #3 (leave blank for generic reason)", class: "block_element" %>
+    <%= text_field_tag "top_matches_3_match_reason_3", nil, class: "input_field quiz_input_field" %>
+
+    <%= submit_tag "submit", class: "block_element button" %>
+  <% end %>
+</div>
