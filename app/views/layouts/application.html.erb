@@ -4,8 +4,8 @@
   <title>Project247</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro|Alegreya:400,700|Dancing+Script|Yeseva+One' rel='stylesheet' type='text/css'>
 </head>
 <body class="<%= controller_name %> <%= action_name %>">
@@ -13,5 +13,6 @@
   <div class="content_container">
     <%= yield %>
   </div>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

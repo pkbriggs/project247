@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui-custom.min
 //= require turbolinks
 //= require jquery-readyselector
 //= require bootstrap-sprockets
+//= require notie.min
+//= require tag-it
 //= require_tree .
