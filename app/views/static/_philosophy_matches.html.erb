@@ -11,7 +11,12 @@
         <ul class="list-inline match_card_content_detail">
           <li class="no_padding_left match_percent olive_text">98% Match</li>
           <li class="address no_padding_right olive_text"><i class="fa fa-map-marker"></i></li>
-          <li class="address no_padding_left olive_text">4.2mi</li>
+          <li class="address no_padding_left olive_text serif_text">
+            <span class="match_distance_number olive_text serif_text">
+              <%= rand(0..5) %>
+            </span>
+            <span class="match_distance_text olive_text serif_text">MI</span>
+          </li>
           <%= render partial: "static/hover", :locals => {:match_num => 1} %>
         </ul>
         <p>
@@ -44,7 +49,12 @@
         <ul class="list-inline match_card_content_detail">
           <li class="no_padding_left match_percent olive_text">98% Match</li>
           <li class="address no_padding_right olive_text"><i class="fa fa-map-marker"></i></li>
-          <li class="address no_padding_left olive_text">4.2mi</li>
+          <li class="address no_padding_left olive_text serif_text">
+            <span class="match_distance_number olive_text serif_text">
+              <%= rand(0..15) %>
+            </span>
+            <span class="match_distance_text olive_text serif_text">MI</span>
+          </li>
           <%= render partial: "static/hover", :locals => {:match_num => 2} %>
         </ul>
         <p>
