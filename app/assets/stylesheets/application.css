@@ -12,5 +12,6 @@
  *
  *= require_self
  *= require main
+ *= require pace/blue/pace-theme-minimal
  *= require_tree ../../../vendor/assets/stylesheets/
  */
