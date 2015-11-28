@@ -59,10 +59,13 @@ class StaticController < ApplicationController
 
   def seed_data
     if request.post?
+      lorem_ipsum = "Lorem ipsum sit amet, consectur adipiscing elit sed do eiusmod tempor inciditunt ut labore et dolore magnum."
+
       session[:possible_match_name] = default(params["possible_match_name"], "Sweet Inspriations")
       session[:possible_match_address] = default(params["possible_match_address"], "555 Main Street, San Francisco, CA, 82135")
 
       session[:top_matches_1_name] = default(params["top_matches_1_name"], "Sweet Delight Bakery")
+      session[:top_matches_1_description] = default(params["top_matches_1_description"], lorem_ipsum)
       session[:top_matches_1_product_match_1] = default(params["top_matches_1_product_match_1"], "cupcakes")
       session[:top_matches_1_product_match_2] = default(params["top_matches_1_product_match_2"], "cookeis")
       session[:top_matches_1_match_reason_1] = default(params["top_matches_1_match_reason_1"], "Highly compatible products")
@@ -70,6 +73,7 @@ class StaticController < ApplicationController
       session[:top_matches_1_match_reason_3] = default(params["top_matches_1_match_reason_3"], "Similar business ideologies")
 
       session[:top_matches_2_name] = default(params["top_matches_2_name"], "San Francisco Coffee Co")
+      session[:top_matches_2_description] = default(params["top_matches_2_description"], lorem_ipsum)
       session[:top_matches_2_product_match_1] = default(params["top_matches_2_product_match_1"], "coffee")
       session[:top_matches_2_product_match_2] = default(params["top_matches_2_product_match_2"], "espresso")
       session[:top_matches_2_match_reason_1] = default(params["top_matches_2_match_reason_1"], "Highly complementary products")
@@ -77,6 +81,7 @@ class StaticController < ApplicationController
       session[:top_matches_2_match_reason_3] = default(params["top_matches_2_match_reason_3"], "Similar business ideologies")
 
       session[:top_matches_3_name] = default(params["top_matches_3_name"], "Tea Time")
+      session[:top_matches_3_description] = default(params["top_matches_3_description"], lorem_ipsum)
       session[:top_matches_3_product_match_1] = default(params["top_matches_3_product_match_1"], "tea")
       session[:top_matches_3_product_match_2] = default(params["top_matches_3_product_match_2"], "honey")
       session[:top_matches_3_match_reason_1] = default(params["top_matches_3_match_reason_1"], "Highly compatible products")

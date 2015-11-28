@@ -18,4 +18,9 @@
 //= require bootstrap-sprockets
 //= require notie.min
 //= require tag-it
+//= require pace/pace
 //= require_tree .
+
+Pace.options.minTime = 30;
+Pace.options.restartOnRequestAfter = 30;
+Pace.options.ajax.trackMethods = ['GET', 'POST', 'PUT', 'DELETE'];
