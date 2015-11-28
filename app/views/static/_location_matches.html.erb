@@ -15,7 +15,9 @@
           </li>
           <li class="address no_padding_right"><i class="fa fa-map-marker olive_text"></i></li>
           <li class="address no_padding_left olive_text serif_text">
-            <span class="match_distance_number olive_text serif_text">4.2</span>
+            <span class="match_distance_number olive_text serif_text">
+              <%= rand(0..5) %>
+            </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
           <%= render partial: "static/hover", :locals => {:match_num => 2} %>
@@ -54,7 +56,9 @@
           </li>
           <li class="address no_padding_right"><i class="fa fa-map-marker olive_text"></i></li>
           <li class="address no_padding_left olive_text serif_text">
-            <span class="match_distance_number olive_text serif_text">4.2</span>
+            <span class="match_distance_number olive_text serif_text">
+              <%= rand(0..15) %>
+            </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
           <%= render partial: "static/hover", :locals => {:match_num => 3} %>
