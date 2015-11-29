@@ -1,14 +1,54 @@
 <div class="row">
-  <div class="col-md-3">
+  <!-- First campaign -->
+  <div class="col-md-4">
     <div class="campaign_card">
-      <h3 class="serif_text top_header">Campaign #1</h3>
-      <%= image_tag "thanksgiving.jpg", class: "img-responsive" %>
+      <div class="campaign_card_img_container">
+        <%= image_tag "business.jpg", class: "img-responsive" %>
+      </div>
+
+      <!-- Text content -->
+      <div class="campaign_card_content">
+        <% their_product = session[:primary_products].split(" ")[0] %>
+        <% matched_product = session["top_matches_#{@match_number}_product_match_1"] %>
+        <h3 class="serif_header_text top_header">
+          <%= their_product %>
+          &
+          <%= matched_product %>
+        </h3>
+
+        <p>
+          98% of establishments that sell <%= their_product %> also serve <%= matched_product %> -- this campaign has a success rate of 88%.
+        </p>
+
+        <div class="green_text serif_text small_margin_bottom">
+          Suggest a
+          <span class="time_selector serif_text">1 month</span>
+          <i class="fa fa-caret-down normal_text_color smaller_font_size"></i>
+          campaign
+        </div>
+      </div>
+
+      <div class="campaign_card_bottom">
+        <a class="message_business" href="/match_detail?name=Bob's%20Bakery">
+          <span class="fa-stack fa-lg message_icon_container">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+          </span>
+          <span class="message_business_text">message us!</span>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="col-md-3">
+
+  <!-- Second campaign -->
+  <div class="col-md-4">
     <div class="campaign_card">
-      <h3 class="serif_text top_header">Campaign #2</h3>
-      <%= image_tag "thanksgiving.jpg", class: "img-responsive" %>
+      <%= image_tag "business.jpg", class: "img-responsive" %>
+      <h3 class="serif_text top_header">
+        <%= session[:primary_products].split(" ")[1] %>
+        &
+        <%= session["top_matches_#{@match_number}_product_match_2"] %>
+      </h3>
     </div>
   </div>
 </div>
