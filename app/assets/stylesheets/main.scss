@@ -24,6 +24,10 @@ html, body, div, span, p {
   // line-height: 25px;
 }
 
+a:focus {
+  outline: none;
+}
+
 .serif_text {
   font-family: 'Alegreya', serif;
 }
