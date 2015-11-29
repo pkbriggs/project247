@@ -1,54 +1,72 @@
-<div class="container small_margin_bottom">
-  <div class="row spacer_large">
-    <div class="col-md-3">
-      <%= image_tag "business.jpg", class: "img-responsive circle" %>
+<div class="inner_match_page_top_container">
+  <div class="row flex">
+    <div class="col-md-4 col-sm-12 no_padding_right flex">
+      <div class="business_img"></div>
     </div>
-    <div class="col-md-9">
-      <h1 class="serif_font"><%= session["top_matches_#{@match_number}_name"] %></h1>
+    <div class="col-md-8 col-sm-12 no_padding_left">
 
-      <!-- Address Information -->
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="list-inline match_detail">
-              <li class="address"><i class="fa fa-map-marker"></i></li>
-              <li class="address">650 Mayfield Avenue, Stanford CA 94305</li>
-          </ul>
+      <div class="row content no_padding_bottom">
+        <div class="col-md-8">
+          <h1 class="serif_font no_margin_top"><%= session["top_matches_#{@match_number}_name"] %></h1>
+
+          <!-- Address Information -->
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-inline match_detail">
+                  <li class="address address_icon"><i class="fa fa-map-marker"></i></li>
+                  <li class="address address_text">650 Mayfield Avenue, Stanford CA 94305</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phone and Address Information -->
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-inline match_detail">
+                  <li class="phone phone_icon"><i class="fa fa-phone"></i></li>
+                  <li class="phone phone_text">(972) 313-6910</li>
+                  <li class="email email_icon"><i class="fa fa-envelope"></i></li>
+                  <li class="email email_text">contact-me@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <a class="block_element button" href="#">contact</a>
         </div>
       </div>
 
-      <!-- Phone Information -->
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="list-inline match_detail">
-              <li class="phone"><i class="fa fa-phone"></i></li>
-              <li class="phone">(972) 313-6910</li>
-          </ul>
+      <div class="content no_padding_top">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo ante, bibendum at ipsum a, bibendum dictum felis.</p>
+        <div class="yelp_review_container">
+          <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
         </div>
       </div>
 
-      <!-- Email Information -->
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="list-inline match_detail">
-              <li class="email"><i class="fa fa-map-marker"></i></li>
-              <li class="email">contact-me@gmail.com</li>
-          </ul>
+      <!-- Popular Product -->
+      <div class="bottom_container content">
+        <div class="row">
+          <div class="col-md-8">
+            <h4 class="serif_text smaller_font_size">Popular Products</h4>
+            <ul class="list-inline">
+              <li><%= session["top_matches_#{@match_number}_product_match_1"] %></li>
+              <li><%= session["top_matches_#{@match_number}_product_match_2"] %></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="serif_header_text text_centered">98%<br/>Match</h3>
+          </div>
         </div>
       </div>
-
-      <h4 class="serif_text"><b>Popular Products</b></h4>
-      <ul class="list-inline">
-        <li><%= session["top_matches_#{@match_number}_product_match_1"] %></li>
-        <li><%= session["top_matches_#{@match_number}_product_match_2"] %></li>
-      </ul>
     </div>
   </div>
+</div>
 
+
+<div class="container spacer_small">
   <!-- Campaign Suggestions -->
   <div class="row small_margin_bottom">
     <div class="col-md-12">
-      <div class="separator spacer"></div>
-
       <!-- Top Campaigns Suggestions -->
       <h2 class="serif_text">Campaign Suggestions</h2>
       <%= render partial: "static/top_campaigns" %>
