@@ -1,28 +1,61 @@
 <div class="row">
   <!-- First and Only Match -->
-  <div class="col-md-4">
-    <div class="match_card">
+  <div class="col-md-5">
+    <a class="match_card" href="/match_detail?match=3">
       <div class="match_card_img_container">
-        <%= image_tag "sweet_inspiration_crop.jpg", class: "img-responsive" %>
-        <div class="match_score">93%</div>
-
-        <%= render partial: "static/hover" %>
+        <%= image_tag "business.jpg", class: "img-responsive" %>
       </div>
 
-      <h2>Match #1</h2>
-
-      <h4>Compatible Products</h4>
-      <ul class="list-inline">
-        <li>my product #1</li>
-        <li class="plus">+</li>
-        <li>their product #2</li>
-      </ul>
-      <ul class="list-inline">
-        <li>my product #3</li>
-        <li class="plus">+</li>
-        <li>their product #1</li>
-      </ul>
-      <a class="block_element button" href="/match_detail?name=Olive's%20Oils">Learn More</a>
-    </div>
+      <div class="match_card_content">
+        <h1 class="serif_header_text top_header no_margin_bottom"><%= session[:top_matches_3_name] %></h1>
+        <ul class="list-inline match_card_content_detail">
+          <li class="no_padding_left match_percent olive_text serif_text">
+            <span class="match_percent_number olive_text serif_text">98%</span>
+            <span class="match_percent_text olive_text serif_text">MATCH</span>
+          </li>
+          <li class="address no_padding_right"><i class="fa fa-map-marker olive_text"></i></li>
+          <li class="address no_padding_left olive_text serif_text">
+            <span class="match_distance_number olive_text serif_text">4.2</span>
+            <span class="match_distance_text olive_text serif_text">MI</span>
+          </li>
+          <%= render partial: "static/hover", :locals => {:match_num => 3} %>
+        </ul>
+        <p>
+          Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
+        </p>
+        <div class="yelp_review_container">
+          <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
+        </div>
+      </div>
+      <div class="match_card_bottom">
+        <h4 class="serif_text normal_font_size">Compatible Products</h4>
+        <ul class="list-inline">
+          <li><%= session[:primary_products].split(" ")[0] %></li>
+          <li class="plus">+</li>
+          <li><%= session[:top_matches_3_product_match_1] %></li>
+        </ul>
+        <ul class="list-inline">
+          <li><%= session[:primary_products].split(" ")[1] %></li>
+          <li class="plus">+</li>
+          <li><%= session[:top_matches_3_product_match_2] %></li>
+        </ul>
+      </div>
+    </a>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

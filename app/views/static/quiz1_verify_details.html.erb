@@ -8,26 +8,38 @@
         <hr class="progress_bar_spacer">
         <div class="progress_bar_step">3</div>
       </div>
-      <div class="progress_bar_step_name serif_text">
+      <div class="progress_bar_step_name cursive_text">
         Basic Information
       </div>
     </div>
   </div>
 </div>
 
-<div class="main_content_container">
+<% business_name_placeholder = "" %>
+<% address_placeholder = "" %>
+<% primary_products_placeholder = "" %>
+
+<% if session[:business_match] %>
+  <% business_name_placeholder = session[:possible_match_name] %>
+  <% address_placeholder = session[:possible_match_address] %>
+<% end %>
+
+
+<div class="row">
+<div class="main_content_container col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
   <p class="serif_text">Great! We used this listing to fill out some basic info for you. Feel free to make any edits, then hit 'next'.</p>
 
   <%= form_tag("/quiz1_verify_details") do %>
       <%= label_tag "business_name", "Business Name", class: "block_element" %>
-      <%= text_field_tag "business_name", nil, class: "input_field quiz_input_field" %>
+      <%= text_field_tag "business_name", nil, value: business_name_placeholder, class: "input_field quiz_input_field" %>
 
       <%= label_tag "address", "Address", class: "block_element" %>
-      <%= text_field_tag "address", nil, class: "input_field quiz_input_field" %>
+      <%= text_field_tag "address", nil, value: address_placeholder, class: "input_field quiz_input_field" %>
 
-      <%= label_tag "primary_products", "Primary Products", class: "block_element" %>
-      <%= text_area_tag "primary_products", nil, class: "input_field quiz_input_field" %>
+      <%= label_tag "primary_products", "Primary Products (separate using commas)", class: "block_element" %>
+      <%= text_field_tag "primary_products", nil, value: primary_products_placeholder, class: "input_field quiz_input_field big_field" %>
 
       <%= submit_tag "next", class: "block_element button" %>
   <% end %>
+</div>
 </div>

@@ -1,23 +1,27 @@
-<div class="match_reasoning_container">
-  <h3 class="serif_font">Reasons you matched</h3>
+<div class="match_reasoning_container_wrapper">
+  <div class="match_reasoning_container">
+    <h3 class="serif_text match_reasoning_header">Reasons you matched</h3>
 
-  <!-- Reason #1 -->
-  <ul class="list-inline reason_line">
-      <li>1</li>
-      <li class="reason">Reason #1</li>
-  </ul>
+    <div class="arrow_box"></div>
 
-  <!-- Reason #2 -->
-  <ul class="list-inline reason_line">
-      <li>2</li>
-      <li class="reason">Reason #2</li>
-  </ul>
+    <!-- Reason #1 -->
+    <ul class="list-inline reason_line">
+        <li class="number">1</li>
+        <li class="reason"><%= session["top_matches_1_match_reason_1"] %></li>
+    </ul>
 
-  <!-- Reason #3 -->
-  <ul class="list-inline reason_line">
-      <li>3</li>
-      <li class="reason">Reason #3</li>
-  </ul>
+    <!-- Reason #2 -->
+    <ul class="list-inline reason_line">
+        <li class="number">2</li>
+        <li class="reason"><%= session["top_matches_1_match_reason_2"] %></li>
+    </ul>
 
-  <i class="fa fa-caret-left fa-3x"></i>
+    <!-- Reason #3 -->
+    <ul class="list-inline reason_line">
+        <li class="number">3</li>
+        <li class="reason"><%= session["top_matches_1_match_reason_3"] %></li>
+    </ul>
+
+    <!-- <i class="fa fa-caret-left fa-3x"></i> -->
+  </div>
 </div>
