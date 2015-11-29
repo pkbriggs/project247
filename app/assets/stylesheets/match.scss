@@ -215,6 +215,16 @@
   margin-top: 50px;
   box-shadow: 0px 2px 2px #e2e2e2;
 
+  .business_img {
+    background: url("business.jpg");
+    background-size: cover;
+    width: 100%;
+  }
+
+  .flex {
+    display: flex;
+  }
+
   .content {
     padding: 15px;
   }
@@ -231,7 +241,6 @@
   }
 
   .bottom_container {
-    height: 100%;
     background: #fbfbfb;
     padding: 3px 20px;
   }
@@ -345,8 +354,6 @@
   padding-bottom: 2px;
 }
 
-
-
 /* General styling */
 section {
   margin-bottom: 20px;
@@ -420,6 +427,10 @@ section {
 
     h1 {
       margin-top: 10px !important;
+    }
+
+    .business_img {
+      background-image: none;
     }
 
     .content {
