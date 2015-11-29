@@ -45,7 +45,10 @@
     }
   }
 
-
+  .match_card_bottom {
+    background: #fbfbfb;
+    padding: 3px 20px;
+  }
 }
 
 .yelp_review_container {
@@ -216,7 +219,7 @@
   box-shadow: 0px 2px 2px #e2e2e2;
 
   .business_img {
-    background: url("business.jpg");
+    background: url("sweet_inspiration.jpg");
     background-size: cover;
     width: 100%;
   }
@@ -290,17 +293,59 @@
 
 
 .campaign_card_img_container {
-  max-height: 140px;
+  height: 100px;
   overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+
+  .campaign_card_header_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .campaign_card_header_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 1px 1px rgba(40, 40, 40, 0.45);
+  }
+
+  .campaign_card_header_main_text {
+    font-size: 1.7em;
+    color: white;
+  }
+
+  .campaign_card_header_subtext {
+    font-size: 1.1em;
+    color: white;
+  }
+
+  .campaign_card_header_plus {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -22px;
+  }
+}
+
+.campaign_card_img1 {
+  background-image: image-url("green_backdrop1.png");
+}
+
+.campaign_card_img2 {
+  background-image: image-url("green_backdrop2.png");
 }
 
 .campaign_card_content {
   padding: 10px 20px;
   box-shadow: 0px 2px 2px #E2E2E2;
   position: relative; // need so box shadow shows
+  background-color: white;
 
   .top_header {
-    font-size: 1.25em;
+    font-size: 1.1em;
     margin-bottom: 4px;
     margin-top: 5px;
   }
@@ -317,8 +362,8 @@
     align-items: center;
 
     .message_icon_container {
-      font-size: 1.6em;
-      margin-top: 10px;
+      font-size: 1.2em;
+      margin-top: 3px;
 
       .fa-circle {
         color: #CED7DB;
@@ -329,12 +374,16 @@
           color: #ABB9BA;
         }
       }
+
+      .fa-envelope {
+        font-size: 0.75em;
+      }
     }
 
     .message_business_text {
       color: #ABB9BA;
-      font-size: 0.8em;
-      margin-bottom: 10px;
+      font-size: 0.65em;
+      margin-bottom: 3px;
     }
   }
 }
