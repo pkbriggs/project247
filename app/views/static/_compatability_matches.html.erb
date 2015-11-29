@@ -22,9 +22,7 @@
           </li>
           <%= render partial: "static/hover", :locals => {:match_num => 3} %>
         </ul>
-        <p>
-          Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
-        </p>
+        <p><%= session[:top_matches_3_description] %></p>
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
         </div>
