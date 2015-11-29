@@ -42,9 +42,12 @@
   color: #6C8D9B;
   padding: 5px 40px;
   background-color: transparent;
+  transition: all 0.5s ease;
 
   &:hover {
     text-decoration: none;
+    color: rgba(150, 180, 129, 1);
+    border: 2px solid rgba(150, 180, 129, 1);
   }
 }
 

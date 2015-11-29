@@ -15,14 +15,14 @@
           </li>
           <li class="address no_padding_right"><i class="fa fa-map-marker olive_text"></i></li>
           <li class="address no_padding_left olive_text serif_text">
-            <span class="match_distance_number olive_text serif_text">4.2</span>
+            <span class="match_distance_number olive_text serif_text">
+              <%= rand(0..10) %>
+            </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
           <%= render partial: "static/hover", :locals => {:match_num => 1} %>
         </ul>
-        <p>
-          Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
-        </p>
+        <p><%= session[:top_matches_1_description] %></p>
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
         </div>
@@ -54,14 +54,14 @@
           </li>
           <li class="address no_padding_right"><i class="fa fa-map-marker olive_text"></i></li>
           <li class="address no_padding_left olive_text serif_text">
-            <span class="match_distance_number olive_text serif_text">4.2</span>
+            <span class="match_distance_number olive_text serif_text">
+              <%= rand(0..15) %>
+            </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
           <%= render partial: "static/hover", :locals => {:match_num => 2} %>
         </ul>
-        <p>
-          Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
-        </p>
+        <p><%= session[:top_matches_2_description] %></p>
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 3, :half_present => true} %>
         </div>
@@ -93,14 +93,14 @@
           </li>
           <li class="address no_padding_right"><i class="fa fa-map-marker olive_text"></i></li>
           <li class="address no_padding_left olive_text serif_text">
-            <span class="match_distance_number olive_text serif_text">4.2</span>
+            <span class="match_distance_number olive_text serif_text">
+              <%= rand(0..25) %>
+            </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
           <%= render partial: "static/hover", :locals => {:match_num => 3} %>
         </ul>
-        <p>
-          Lorem ipsum sit amet, consectur adipiscing elit, sed do eiusmod tempor inciditunt ut labore et dolore magnum.
-        </p>
+        <p><%= session[:top_matches_3_description] %></p>
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 4, :half_present => false} %>
         </div>
