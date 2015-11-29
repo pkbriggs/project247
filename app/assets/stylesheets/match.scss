@@ -43,30 +43,33 @@
       margin-bottom: -2px;
       margin-top: 5px;
     }
+  }
 
-    .yelp_review_container {
-      margin-bottom: 12px;
+  .match_card_bottom {
+    background: #fbfbfb;
+    padding: 3px 20px;
+  }
+}
 
-      .star {
-        color: #D2995B;
-        padding-left: 2px;
-        padding-right: 2px;
-        font-size: 0.6em;
+.yelp_review_container {
+  margin-bottom: 12px;
 
-        &:first-of-type {
-          padding-left: 0px;
-        }
-      }
+  .star {
+    color: #D2995B;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 0.6em;
 
-      .star_label {
-        padding-left: 5px;
-        color: #CACCCB;
-        font-size: 0.8em;
-      }
+    &:first-of-type {
+      padding-left: 0px;
     }
   }
 
-
+  .star_label {
+    padding-left: 5px;
+    color: #CACCCB;
+    font-size: 0.8em;
+  }
 }
 
 .match_card_content_detail {
@@ -98,29 +101,6 @@
     opacity: 0.0;
     pointer-events: none;
     transition: opacity 0.15s ease-in;
-
-    // i {
-    //   position: absolute;
-    //   position: absolute;
-    //   top: 20px;
-    //   left: -12px;
-    //   color: rgba(255, 255, 255, 0.93);
-
-    //   &:after {
-    //     bottom: 100%;
-    //     left: 50%;
-    //     border: solid transparent;
-    //     content: " ";
-    //     height: 0;
-    //     width: 0;
-    //     position: absolute;
-    //     pointer-events: none;
-    //     border-color: rgba(0, 0, 0, 0);
-    //     border-bottom-color: #000000;
-    //     border-width: 5px;
-    //     margin-left: -5px;
-    //   }
-    // }
 
     .match_reasoning_header {
       font-size: 1.05em;
@@ -201,6 +181,23 @@
     border-width: 2px;
     font-size: 0.65em;
   }
+
+  .email_text, .address_text {
+    padding-left: 2px;
+  }
+
+  .email_icon, .phone_icon, .address_icon {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .phone_icon {
+    padding-right: 0px;
+  }
+
+  .phone_text {
+    padding-left: 0px;
+  }
 }
 
 .reason_line {
@@ -216,6 +213,45 @@
 }
 
 /* Styling for match detail page */
+
+.inner_match_page_top_container {
+  margin-top: 50px;
+  box-shadow: 0px 2px 2px #e2e2e2;
+
+  .business_img {
+    background: url("sweet_inspiration.jpg");
+    background-size: cover;
+    width: 100%;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .set_height {
+    height: 310px;
+    overflow: hidden;
+  }
+
+  .button {
+    text-align: center;
+    max-width: 160px;
+    margin: 40px 0px 10px 0px;
+  }
+
+  .bottom_container {
+    background: #fbfbfb;
+    padding: 3px 20px;
+  }
+
+  p {
+    margin: 15px 0px;
+  }
+}
 
 .circle {
   height: 250px;
@@ -257,17 +293,59 @@
 
 
 .campaign_card_img_container {
-  max-height: 140px;
+  height: 100px;
   overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+
+  .campaign_card_header_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .campaign_card_header_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 1px 1px rgba(40, 40, 40, 0.45);
+  }
+
+  .campaign_card_header_main_text {
+    font-size: 1.7em;
+    color: white;
+  }
+
+  .campaign_card_header_subtext {
+    font-size: 1.1em;
+    color: white;
+  }
+
+  .campaign_card_header_plus {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -22px;
+  }
+}
+
+.campaign_card_img1 {
+  background-image: image-url("green_backdrop1.png");
+}
+
+.campaign_card_img2 {
+  background-image: image-url("green_backdrop2.png");
 }
 
 .campaign_card_content {
   padding: 10px 20px;
   box-shadow: 0px 2px 2px #E2E2E2;
   position: relative; // need so box shadow shows
+  background-color: white;
 
   .top_header {
-    font-size: 1.25em;
+    font-size: 1.1em;
     margin-bottom: 4px;
     margin-top: 5px;
   }
@@ -284,8 +362,8 @@
     align-items: center;
 
     .message_icon_container {
-      font-size: 1.6em;
-      margin-top: 10px;
+      font-size: 1.2em;
+      margin-top: 3px;
 
       .fa-circle {
         color: #CED7DB;
@@ -296,12 +374,16 @@
           color: #ABB9BA;
         }
       }
+
+      .fa-envelope {
+        font-size: 0.75em;
+      }
     }
 
     .message_business_text {
       color: #ABB9BA;
-      font-size: 0.8em;
-      margin-bottom: 10px;
+      font-size: 0.65em;
+      margin-bottom: 3px;
     }
   }
 }
@@ -321,8 +403,6 @@
   padding-bottom: 2px;
 }
 
-
-
 /* General styling */
 section {
   margin-bottom: 20px;
@@ -330,6 +410,10 @@ section {
 
 .top_header {
   margin-top: 10px;
+}
+
+.spacer_small {
+  margin-top: 20px;
 }
 
 .spacer {
@@ -360,10 +444,75 @@ section {
   padding-left: 0px !important;
 }
 
+.no_padding_top {
+  padding-top: 0px !important;
+}
+
+.no_padding_bottom {
+  padding-bottom: 0px !important;
+}
+
 .no_margin_bottom {
   margin-bottom: 0px;
 }
 
+.no_margin_right {
+  margin-right: 0px;
+}
+
+.no_margin_left {
+  margin-left: 0px;
+}
+
 .min_padding_left {
   padding-left: 8px;
+}
+
+/* Responsive Styling */
+
+@media (max-width: 767px) {
+  .inner_match_page_top_container {
+    margin-top: 10px;
+
+    h1 {
+      margin-top: 10px !important;
+    }
+
+    .business_img {
+      background-image: none;
+    }
+
+    .content {
+      padding: 5px;
+    }
+
+    .set_height {
+      height: auto;
+      overflow: inherit;
+    }
+
+    .button {
+      margin: 10px auto;
+    }
+
+    p {
+      margin: 5px 0px;
+    }
+
+    .no_padding_right {
+      padding-right: 15px !important;
+    }
+
+    .no_padding_left {
+      padding-left: 15px !important;
+    }
+
+    .no_padding_top {
+      padding-top: inherit !important;
+    }
+
+    .no_padding_bottom {
+      padding-bottom: inherit !important;
+    }
+  }
 }
