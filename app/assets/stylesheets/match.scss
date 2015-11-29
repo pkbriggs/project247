@@ -290,6 +290,11 @@
       .fa-circle {
         color: #CED7DB;
         text-stroke: 1px #ABB9BA;
+        // transition: all 0.2s ease-in;
+
+        &:hover {
+          color: #ABB9BA;
+        }
       }
     }
 

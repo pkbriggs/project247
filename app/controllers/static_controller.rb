@@ -64,7 +64,7 @@ class StaticController < ApplicationController
 
       session[:top_matches_1_name] = default(params["top_matches_1_name"], "Sweet Delight Bakery")
       session[:top_matches_1_product_match_1] = default(params["top_matches_1_product_match_1"], "cupcakes")
-      session[:top_matches_1_product_match_2] = default(params["top_matches_1_product_match_2"], "cookeis")
+      session[:top_matches_1_product_match_2] = default(params["top_matches_1_product_match_2"], "cookies")
       session[:top_matches_1_match_reason_1] = default(params["top_matches_1_match_reason_1"], "Highly compatible products")
       session[:top_matches_1_match_reason_2] = default(params["top_matches_1_match_reason_2"], "High levels of community involvement")
       session[:top_matches_1_match_reason_3] = default(params["top_matches_1_match_reason_3"], "Similar business ideologies")
