@@ -2,7 +2,7 @@
 
 <div class="row">
   <!-- First campaign -->
-  <% their_product = session[:primary_products].split(" ")[0] %>
+  <% their_product = session[:primary_products].split(",")[0] %>
   <% matched_product = session["top_matches_#{@match_number}_product_match_1"] %>
 
   <div class="col-md-4">
@@ -57,7 +57,7 @@
   </div>
 
   <!-- Second campaign -->
-  <% their_product = session[:primary_products].split(" ")[1] %>
+  <% their_product = session[:primary_products].split(",")[1] %>
   <% matched_product = session["top_matches_#{@match_number}_product_match_2"] %>
 
   <div class="col-md-4">

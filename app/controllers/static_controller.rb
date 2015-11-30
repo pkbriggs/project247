@@ -153,7 +153,7 @@ class StaticController < ApplicationController
       session[:business_match] = "yes" if !session[:business_match]
 
       session[:address] = "123 Main Street, San Francisco, CA, 12345" if !session[:address]
-      session[:primary_products] = "cake coffee" if !session[:primary_products]
+      session[:primary_products] = "cake,coffee" if !session[:primary_products]
 
       session[:average_num_daily_customers] = 50 if !session[:average_num_daily_customers]
       session[:most_known_product] = "cake" if !session[:most_known_product]
