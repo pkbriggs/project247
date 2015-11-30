@@ -7,6 +7,7 @@
 @import "static";
 @import "match";
 @import "quiz";
+@import "homepage";
 
 html, body {
   height: 100%;
@@ -48,6 +49,10 @@ a:focus {
   font-size: 1.0em;
 }
 
+.bigger_font_size {
+  font-size: 1.2em;
+}
+
 .smaller_font_size {
   font-size: 0.9em;
 }
@@ -67,7 +72,7 @@ a:focus {
 .content_container {
   overflow-x: hidden;
   height: 100%;
-  // padding-top: 50px; // height of the navbar
+  // padding-top: 68px; // height of the navbar
 }
 
 .navbar {
@@ -79,17 +84,16 @@ a:focus {
   padding-left: 30px;
   padding-right: 30px;
   width: 100%;
-  height: 50px;
-  background-color: rgba(150, 180, 129, 0.95);
-  box-shadow: 0px 1px 2px rgba(20, 20, 20, 0.22);
+  height: 68px;
+  background-color: rgba(150, 180, 129, 0.83);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.22);
   border-radius: 0px;
-  z-index: 3;
 }
 
 .smaller_backdrop {
-  height: 30%;
+  height: 250px;
 
   .backdrop_header_text {
-    padding-top: 50px; // to account for navbar
+    padding-top: 68px; // to account for navbar
   }
 }

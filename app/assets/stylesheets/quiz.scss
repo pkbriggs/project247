@@ -5,6 +5,19 @@
   font-size: 1.0rem;
 }
 
+.tall_input_field {
+  height: 3.4em;
+}
+
+.medium_tall_input_field {
+  height: 3.0em;
+}
+
+.form_label {
+  font-size: 1.2em;
+  padding-bottom: 7px;
+}
+
 .quiz_input_field {
   background-color: #F6F6F6;
   border: 1px solid #E6E6E6;
@@ -29,6 +42,15 @@
   input {
     background: blue;
   }
+}
+
+.tagit-choice {
+  border: 2px solid #6C8D9B;
+  border-radius: 6px;
+}
+
+.tagit-label {
+  color: #6C8D9B;
 }
 
 .big_field {
@@ -84,14 +106,21 @@ label {
   height: 100%;
 }
 
+.business_name_entry_overlay_container {
+  padding: 30px 50px !important;
+}
+
 .overlay_container {
   background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 30px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.14);
 
   .next_button {
     margin-left: auto;
     margin-top: 20px;
+    padding: 9px 40px;
+    font-size: 1.2em;
   }
 }
 
@@ -122,8 +151,9 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8px 15px;
-    background-color: rgba(108, 141, 155, 0.7);
+    padding: 12px 16px;
+    padding-top: 10px;
+    background-color: rgba(108, 141, 155, 0.58);
     text-shadow: 0px 1px 1px rgba(93, 117, 127, 0.7);
     width: 100%;
   }
@@ -147,13 +177,15 @@ label {
   justify-content: center;
 
   .yes_no_button {
-    font-size: 1.2em;
+    font-size: 1.3em;
+    padding: 10px 55px;
+
     &:first-of-type {
-      margin-right: 5px;
+      margin-right: 8px;
     }
 
     &:last-of-type {
-      margin-left: 5px;
+      margin-left: 8px;
     }
   }
 }
@@ -164,15 +196,15 @@ label {
 .progress_bar {
   display: flex;
   align-items: center;
-  padding-top: 50px; // to account for navbar
+  padding-top: 80px; // to account for navbar + some extra
 
   .progress_bar_step {
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: white;
-    padding-left: 22px;
-    padding-right: 22px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border: 3px solid white;
     border-radius: 60px;
     box-shadow: 0px 2px 2px rgba(30, 30, 30, 0.4);
@@ -212,6 +244,14 @@ label {
 
 .block_element {
   display: block;
+}
+
+.first_form_input_spacing {
+  margin-top: 32px;
+}
+
+.form_input_spacing {
+  margin-top: 6px;
 }
 
 // Seed data styling
