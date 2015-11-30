@@ -112,56 +112,56 @@ class StaticController < ApplicationController
   end
 
   def seed_data_check()
-    if session[:is_match_data_complete] == nil || !session[:is_match_data_complete]
+    if !session[:is_match_data_complete]
       lorem_ipsum = "Lorem ipsum sit amet, consectur adipiscing elit sed do eiusmod tempor inciditunt ut labore et dolore magnum."
       reason_1 = "Highly compatible products"
       reason_2 = "High levels of community involvement"
       reason_3 = "Similar business ideologies"
 
-      session[:possible_match_name] = "Sweet Inspriations" if session[:possible_match_name] == nil
-      session[:possible_match_address] = "555 Main Street, San Francisco, CA, 82135" if session[:possible_match_address] == nil
+      session[:possible_match_name] = "Sweet Inspriations" if !session[:possible_match_name]
+      session[:possible_match_address] = "555 Main Street, San Francisco, CA, 82135" if !session[:possible_match_address]
 
-      session[:top_matches_1_name] = "Sweet Delight Bakery" if session[:top_matches_1_name] == nil
-      session[:top_matches_1_description] =  lorem_ipsum if session[:top_matches_1_description] == nil
-      session[:top_matches_1_product_match_1] = "cupcakes" if session[:top_matches_1_product_match_1] == nil
-      session[:top_matches_1_product_match_2] = "cookies" if session[:top_matches_1_product_match_2] == nil
-      session[:top_matches_1_match_reason_1] = reason_1 if session[:top_matches_1_match_reason_1] == nil
-      session[:top_matches_1_match_reason_2] = reason_2 if session[:top_matches_1_match_reason_2] == nil
-      session[:top_matches_1_match_reason_3] = reason_3 if session[:top_matches_1_match_reason_3] == nil
+      session[:top_matches_1_name] = "Sweet Delight Bakery" if !session[:top_matches_1_name]
+      session[:top_matches_1_description] =  lorem_ipsum if !session[:top_matches_1_description]
+      session[:top_matches_1_product_match_1] = "cupcakes" if !session[:top_matches_1_product_match_1]
+      session[:top_matches_1_product_match_2] = "cookies" if !session[:top_matches_1_product_match_2]
+      session[:top_matches_1_match_reason_1] = reason_1 if !session[:top_matches_1_match_reason_1]
+      session[:top_matches_1_match_reason_2] = reason_2 if !session[:top_matches_1_match_reason_2]
+      session[:top_matches_1_match_reason_3] = reason_3 if !session[:top_matches_1_match_reason_3]
 
-      session[:top_matches_2_name] = "San Francisco Coffee Co" if session[:top_matches_2_name] == nil
-      session[:top_matches_2_description] =  lorem_ipsum if session[:top_matches_2_description] == nil
-      session[:top_matches_2_product_match_1] = "coffee" if session[:top_matches_2_product_match_1] == nil
-      session[:top_matches_2_product_match_2] = "espresso" if session[:top_matches_2_product_match_2] == nil
-      session[:top_matches_2_match_reason_1] = reason_1 if session[:top_matches_2_match_reason_1] == nil
-      session[:top_matches_2_match_reason_2] = reason_2 if session[:top_matches_2_match_reason_2] == nil
-      session[:top_matches_2_match_reason_3] = reason_3 if session[:top_matches_2_match_reason_3] == nil
+      session[:top_matches_2_name] = "San Francisco Coffee Co" if !session[:top_matches_2_name]
+      session[:top_matches_2_description] =  lorem_ipsum if !session[:top_matches_2_description]
+      session[:top_matches_2_product_match_1] = "coffee" if !session[:top_matches_2_product_match_1]
+      session[:top_matches_2_product_match_2] = "espresso" if !session[:top_matches_2_product_match_2]
+      session[:top_matches_2_match_reason_1] = reason_1 if !session[:top_matches_2_match_reason_1]
+      session[:top_matches_2_match_reason_2] = reason_2 if !session[:top_matches_2_match_reason_2]
+      session[:top_matches_2_match_reason_3] = reason_3 if !session[:top_matches_2_match_reason_3]
 
-      session[:top_matches_3_name] = "Tea Time" if session[:top_matches_3_name] == nil
-      session[:top_matches_3_description] =  lorem_ipsum if session[:top_matches_3_description] == nil
-      session[:top_matches_3_product_match_1] = "tea" if session[:top_matches_3_product_match_1] == nil
-      session[:top_matches_3_product_match_2] = "honey" if session[:top_matches_3_product_match_2] == nil
-      session[:top_matches_3_match_reason_1] = reason_1 if session[:top_matches_3_match_reason_1] == nil
-      session[:top_matches_3_match_reason_2] = reason_2 if session[:top_matches_3_match_reason_2] == nil
-      session[:top_matches_3_match_reason_3] = reason_3 if session[:top_matches_3_match_reason_3] == nil
+      session[:top_matches_3_name] = "Tea Time" if !session[:top_matches_3_name]
+      session[:top_matches_3_description] =  lorem_ipsum if !session[:top_matches_3_description]
+      session[:top_matches_3_product_match_1] = "tea" if !session[:top_matches_3_product_match_1]
+      session[:top_matches_3_product_match_2] = "honey" if !session[:top_matches_3_product_match_2]
+      session[:top_matches_3_match_reason_1] = reason_1 if !session[:top_matches_3_match_reason_1]
+      session[:top_matches_3_match_reason_2] = reason_2 if !session[:top_matches_3_match_reason_2]
+      session[:top_matches_3_match_reason_3] = reason_3 if !session[:top_matches_3_match_reason_3]
 
       session[:is_match_data_complete] = true # Marks that we  don't need to set defaults again
     end
 
-    if session[:quiz_complete] == nil || session[:quiz_complete] < 5
-      session[:business_name] = "Sweet Inspriations" if session[:business_name] == nil
-      session[:business_match] = "yes" if session[:business_match] == nil
+    if !session[:quiz_complete] || session[:quiz_complete] < 5
+      session[:business_name] = "Sweet Inspriations" if !session[:business_name]
+      session[:business_match] = "yes" if !session[:business_match]
 
-      session[:address] = "123 Main Street, San Francisco, CA, 12345" if session[:address] == nil
-      session[:primary_products] = "cake coffee" if session[:primary_products] == nil
+      session[:address] = "123 Main Street, San Francisco, CA, 12345" if !session[:address]
+      session[:primary_products] = "cake coffee" if !session[:primary_products]
 
-      session[:average_num_daily_customers] = 50 if session[:average_num_daily_customers] == nil
-      session[:most_known_product] = "cake" if session[:most_known_product] == nil
-      session[:product_interested_in_selling] = "coffee" if session[:product_interested_in_selling] == nil
+      session[:average_num_daily_customers] = 50 if !session[:average_num_daily_customers]
+      session[:most_known_product] = "cake" if !session[:most_known_product]
+      session[:product_interested_in_selling] = "coffee" if !session[:product_interested_in_selling]
 
-      session[:community_involvement] = "3" if session[:community_involvement] == nil
-      session[:biggest_priority] = "5" if  session[:biggest_priority] == nil
-      session[:customer_satisfaction_importance] = "4" if session[:customer_satisfaction_importance] == nil
+      session[:community_involvement] = "3" if !session[:community_involvement]
+      session[:biggest_priority] = "5" if  !session[:biggest_priority]
+      session[:customer_satisfaction_importance] = "4" if !session[:customer_satisfaction_importance]
 
       session[:quiz_complete] = 5 # Marks that we  don't need to set defaults again
     end
