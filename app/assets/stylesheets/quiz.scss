@@ -1,3 +1,6 @@
+// @import "font-awesome-sprockets";
+@import "font-awesome";
+
 // Generic styles
 .input_field {
   border-radius: 8px;
@@ -28,6 +31,7 @@
 }
 
 .tagit {
+  min-height: 180px;
   border-radius: 8px !important;
   border: 1px solid rgba(151, 151, 151, 0.47) !important;
   font-size: 1.0rem !important;
@@ -39,18 +43,55 @@
   width: 50% !important;
   min-width: 200px !important;
 
-  input {
-    background: blue;
+  li {
+    margin-right: 10px !important;
+    margin-bottom: 5px !important;
   }
 }
 
 .tagit-choice {
+  display: flex;
+  align-items: center;
   border: 2px solid #6C8D9B;
   border-radius: 6px;
 }
 
+.tagit-choice-editable {
+  padding-top: 0.3em !important;
+  padding-bottom: 0.3em !important;
+  padding-left: 1.1em !important;
+  padding-right: 0.8em !important;
+}
+
 .tagit-label {
   color: #6C8D9B;
+  padding-right: 10px;
+}
+
+.tagit-close {
+  position: relative !important;
+  text-decoration: none;
+
+  right: inherit !important;
+  top: inherit !important;
+  margin-top: inherit !important;
+  line-height: inherit !important;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.tagit-close .text-icon {
+  position: relative;
+  color: #6C8D9B;
+  display: inherit !important;
+  font-weight: 700;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: #58737E;
+  }
 }
 
 .big_field {
