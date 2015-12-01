@@ -30,12 +30,12 @@
       <div class="match_card_bottom">
         <h4 class="serif_text normal_font_size">Compatible Products</h4>
         <ul class="list-inline">
-          <li><%= session[:primary_products].split(" ")[0] %></li>
+          <li><%= session[:primary_products].split(",")[0] %></li>
           <li class="plus">+</li>
           <li><%= session[:top_matches_3_product_match_1] %></li>
         </ul>
         <ul class="list-inline">
-          <li><%= session[:primary_products].split(" ")[1] %></li>
+          <li><%= session[:primary_products].split(",")[1] %></li>
           <li class="plus">+</li>
           <li><%= session[:top_matches_3_product_match_2] %></li>
         </ul>
