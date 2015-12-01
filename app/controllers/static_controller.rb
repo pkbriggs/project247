@@ -30,7 +30,7 @@ class StaticController < ApplicationController
     if request.post?
       session[:business_name] = default(params[:business_name], "Sweet Inspriations")
       session[:address] = default(params[:address], "123 Main Street, San Francisco, CA, 12345")
-      session[:primary_products] = default(params[:primary_products], "cake coffee")
+      session[:primary_products] = default(params[:primary_products].split(","), ["cake", "coffee"])
       session[:quiz_complete] = 3 if session[:quiz_complete] != 5
       redirect_to action: "quiz2"
     end
@@ -111,7 +111,7 @@ class StaticController < ApplicationController
     end
   end
 
-  def seed_data_check()
+  def seed_data_check
     if !session[:is_match_data_complete]
       lorem_ipsum = "Lorem ipsum sit amet, consectur adipiscing elit sed do eiusmod tempor inciditunt ut labore et dolore magnum."
       reason_1 = "Highly compatible products"
@@ -153,7 +153,7 @@ class StaticController < ApplicationController
       session[:business_match] = "yes" if !session[:business_match]
 
       session[:address] = "123 Main Street, San Francisco, CA, 12345" if !session[:address]
-      session[:primary_products] = "cake,coffee" if !session[:primary_products]
+      session[:primary_products] = ["cake", "coffee"] if !session[:primary_products]
 
       session[:average_num_daily_customers] = 50 if !session[:average_num_daily_customers]
       session[:most_known_product] = "cake" if !session[:most_known_product]
