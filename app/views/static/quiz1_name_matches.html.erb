@@ -1,23 +1,21 @@
 <div class="backdrop full_page_backdrop">
-  <div class="row">
-    <div class="overlay_container col-md-6 col-md-offset-3">
-      <h2 class="serif_text no_margin_top">Great! We've found this match online. Is this you?</h2>
+  <div class="overlay_container name_match_overlay_container">
+    <h2 class="serif_text no_margin_top">Great! We've found this match online. Is this you?</h2>
 
-      <div class="possible_name_match">
-        <div class="possible_name_match_detail_container">
-          <div class="possible_name_match_details">
-            <h2 class="possible_name_match_name serif_text"><%= session[:possible_match_name] %></h2>
-            <p class="possible_name_match_address"><%= session[:possible_match_address] %></p>
-          </div>
+    <div class="possible_name_match">
+      <div class="possible_name_match_detail_container">
+        <div class="possible_name_match_details">
+          <h2 class="possible_name_match_name serif_text"><%= session[:possible_match_name] %></h2>
+          <p class="possible_name_match_address"><%= session[:possible_match_address] %></p>
         </div>
       </div>
-
-      <div class="yes_no_buttons">
-        <%= link_to "no", "/quiz1_name_matches?match=no", method: :post, class: "yes_no_button button big" %>
-        <%= link_to "yes", "/quiz1_name_matches?match=yes", method: :post, class: "yes_no_button button big" %>
-      </div>
-
     </div>
+
+    <div class="yes_no_buttons">
+      <%= link_to "no", "/quiz1_name_matches?match=no", method: :post, class: "yes_no_button button big" %>
+      <%= link_to "yes", "/quiz1_name_matches?match=yes", method: :post, class: "yes_no_button button big" %>
+    </div>
+
   </div>
 </div>
 

@@ -16,17 +16,17 @@
 </div>
 
 <div class="main_content_container col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-  <p class="serif_text">Now could you provide us with some additional background information about your business?</p>
+  <p class="serif_text bigger_font_size">Now could you provide us with some additional background information about your business?</p>
 
   <%= form_tag("/quiz2") do %>
-      <%= label_tag "average_num_daily_customers", "On average, how many customers do you serve per day?", class: "block_element" %>
-      <%= number_field_tag "average_num_daily_customers", nil, within: 1...100000, class: "input_field quiz_input_field" %>
+      <%= label_tag "average_num_daily_customers", "On average, how many customers do you serve per day?", class: "block_element form_label serif_text first_form_input_spacing" %>
+      <%= number_field_tag "average_num_daily_customers", nil, within: 1...100000, class: "input_field quiz_input_field medium_tall_input_field" %>
 
-      <%= label_tag "most_known_product", "What product are you most known for?", class: "block_element" %>
-      <%= text_field_tag "most_known_product", nil, class: "input_field quiz_input_field" %>
+      <%= label_tag "most_known_product", "What product are you most known for?", class: "block_element serif_text form_label form_input_spacing" %>
+      <%= text_field_tag "most_known_product", nil, class: "input_field quiz_input_field medium_tall_input_field" %>
 
-      <%= label_tag "product_interested_in_selling", "Is there a product/service that you are interested in selling, but don’t already sell? If yes, what product/service?", class: "block_element" %>
-      <%= text_field_tag "product_interested_in_selling", nil, class: "input_field quiz_input_field" %>
+      <%= label_tag "product_interested_in_selling", "Is there a product/service that you are interested in selling, but don’t already sell? If yes, what product/service?", class: "block_element serif_text form_label form_input_spacing" %>
+      <%= text_field_tag "product_interested_in_selling", nil, class: "input_field quiz_input_field medium_tall_input_field" %>
 
       <%= submit_tag "next", class: "block_element button" %>
   <% end %>

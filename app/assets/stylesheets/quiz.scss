@@ -165,19 +165,25 @@ label {
   }
 }
 
+.name_match_overlay_container {
+  width: 535px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 // Name match page
 .possible_name_match {
   display: flex;
   background-image: image-url("sweet_inspiration.jpg");
   background-size: cover;
-  height: 200px;
-  width: 200px;
+  height: 205px;
+  width: 205px;
   border-radius: 400px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-bottom: 46px;
   overflow: hidden;
   box-shadow: 0px 1px 2px rgba(40, 40, 40, 0.5);
 
@@ -219,7 +225,7 @@ label {
 
   .yes_no_button {
     font-size: 1.3em;
-    padding: 10px 55px;
+    padding: 12px 55px;
 
     &:first-of-type {
       margin-right: 8px;
@@ -316,4 +322,9 @@ label {
   &:first-of-type {
     margin-top: 0px;
   }
+}
+
+// hide a class automatically added by JQuery UI autocomplete (for products input)
+.ui-helper-hidden-accessible {
+  display: none;
 }
