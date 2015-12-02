@@ -165,10 +165,10 @@
   padding-left: 5px;
 
   li {
-    border: 1px solid #7A8493;
-    color: #7A8493;
+    border: 2px solid #91A4AE;
+    color: #91A4AE;
     border-radius: 8px;
-    padding: 3px 8px;
+    padding: 2px 9px;
     margin-bottom: 3px;
     margin-right: 3px;
     font-size: 0.8em;
@@ -217,16 +217,135 @@
 }
 
 /* Styling for match detail page */
+.inner_match_page_top_container {
+  display: flex;
+}
+
+.inner_match_image_container {
+  min-width: 240px;
+  height: 240px;
+
+  background: url("sweet_inspiration.jpg");
+  background-size: cover;
+}
+
+.inner_match_content_container {
+  width: 100%;
+  max-height: 240px;
+  overflow-y: hidden;
+
+  .name_and_contact_container {
+    display: flex;
+
+    .contact_button {
+      margin-left: auto;
+      margin-right: 8%;
+    }
+
+    .name_and_contact_info {
+      padding: 17px 20px 0px 20px;
+
+      h1 {
+        margin: 0px;
+        font-size: 1.4em;
+      }
+
+      i {
+        padding-right: 5px;
+      }
+
+      div, span, i {
+        color: #63665E;
+      }
+
+      div, span {
+        font-size: 0.8rem;
+      }
+
+      .business_address {
+        padding-top: 3px;
+
+        .distance_to_business {
+          padding-left: 10px;
+        }
+      }
+
+      .business_phone_and_email {
+        display: flex;
+        padding-top: 6px;
+
+        .phone_info {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+.description_and_rating_container {
+  padding: 0px 20px;
+
+  .description {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    font-size: 0.8em;
+    color: #777;
+  }
+
+  .yelp_review_container {
+    margin-bottom: 13px;
+  }
+}
+
+.inner_match_popular_products_outer_container {
+  display: flex;
+  width: 100%;
+  background-color: #FBFBFB;
+  border: 1px solid #F5F5F5;
+  padding: 0px 20px;
+
+  .popular_products_container {
+    .popular_products_header {
+      font-size: 0.9em;
+      margin-top: 13px;
+      margin-bottom: 6px;
+    }
+  }
+
+  .match_percentage_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 10%;
+    margin-top: -2px;
+
+    .match_percentage_number, .match_percentage_label {
+      color: #6E7366;
+    }
+
+    .match_percentage_number {
+      font-size: 2.0em;
+      margin-bottom: -2px;
+    }
+
+    .match_percentage_label {
+      font-size: 0.75em;
+    }
+  }
+}
+
+
+
+
+
+
+
+
 
 .inner_match_page_top_container {
   margin-top: 68px;
   box-shadow: 0px 2px 2px #e2e2e2;
-
-  .business_img {
-    background: url("sweet_inspiration.jpg");
-    background-size: cover;
-    width: 100%;
-  }
 
   .flex {
     display: flex;
@@ -250,10 +369,6 @@
   .bottom_container {
     background: #fbfbfb;
     padding: 3px 20px;
-  }
-
-  p {
-    margin: 15px 0px;
   }
 }
 
@@ -280,7 +395,7 @@
 .campaign_card {
   // padding: 10px;
   padding-top: 0px;
-  margin: 10px;
+  margin-top: 10px;
   border: 1px solid #eaeaea;
   border-radius: 2px;
   background: #f7f7f7;

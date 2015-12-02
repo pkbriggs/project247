@@ -1,62 +1,62 @@
 <div class="inner_match_page_top_container">
-  <div class="row flex">
-    <div class="col-md-4 col-sm-12 no_padding_right flex">
-      <div class="business_img"></div>
-    </div>
-    <div class="col-md-8 col-sm-12 no_padding_left">
+  <!-- Business image -->
+  <div class="inner_match_image_container">
+  </div>
 
-      <div class="row content no_padding_bottom">
-        <div class="col-md-8">
-          <h1 class="serif_font no_margin_top"><%= session["top_matches_#{@match_number}_name"] %></h1>
-
-          <!-- Address Information -->
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="list-inline match_detail">
-                  <li class="address address_icon"><i class="fa fa-map-marker"></i></li>
-                  <li class="address address_text">650 Mayfield Avenue, Stanford CA 94305</li>
-              </ul>
-            </div>
+  <!-- Business info -->
+  <div class="inner_match_content_container">
+    <!-- Business details, contact info, etc. -->
+    <div class="inner_match_details_container">
+      <!-- Name, contact info, and contact button -->
+      <div class="name_and_contact_container">
+        <div class="name_and_contact_info">
+          <h1 class="serif_header_text"><%= session["top_matches_#{@match_number}_name"] %></h1>
+          <div class="business_address">
+            <i class="fa fa-map-marker"></i>
+            <span>123 Main Street, San Francisco, CA, 12345</span>
+            <span class="distance_to_business">(4.2mi)</span>
           </div>
+          <div class="business_phone_and_email">
+            <div class="phone_info">
+              <i class="fa fa-phone"></i>
+              <span>(555) 123-4567</span>
+            </div>
 
-          <!-- Phone and Address Information -->
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="list-inline match_detail">
-                  <li class="phone phone_icon"><i class="fa fa-phone"></i></li>
-                  <li class="phone phone_text">(972) 313-6910</li>
-                  <li class="email email_icon"><i class="fa fa-envelope"></i></li>
-                  <li class="email email_text">contact-me@gmail.com</li>
-              </ul>
+            <div class="email_info">
+              <i class="fa fa-envelope"></i>
+              <span>email@business.com</span>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <a class="block_element button" href="#">contact</a>
+
+        <div class="contact_button">
+          <a class="button block_element">contact</a>
         </div>
       </div>
 
-      <div class="content no_padding_top">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo ante, bibendum at ipsum a, bibendum dictum felis.</p>
+      <div class="description_and_rating_container">
+        <p class="description"><%= session["top_matches_#{@match_number}_description"] %></p>
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
         </div>
       </div>
+    </div>
 
-      <!-- Popular Product -->
-      <div class="bottom_container content">
-        <div class="row">
-          <div class="col-md-8">
-            <h4 class="serif_text smaller_font_size">Popular Products</h4>
-            <ul class="list-inline">
-              <li><%= session["top_matches_#{@match_number}_product_match_1"] %></li>
-              <li><%= session["top_matches_#{@match_number}_product_match_2"] %></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h3 class="serif_header_text text_centered">98%<br/>Match</h3>
-          </div>
-        </div>
+    <!-- Popular products section -->
+    <div class="inner_match_popular_products_outer_container">
+      <!-- Popular products -->
+      <div class="popular_products_container">
+        <h4 class="serif_text popular_products_header">Popular Products</h4>
+        <ul class="list-inline">
+          <li><%= session["top_matches_#{@match_number}_product_match_1"] %></li>
+          <li><%= session["top_matches_#{@match_number}_product_match_2"] %></li>
+        </ul>
+      </div>
+
+      <!-- Match percentage -->
+      <div class="match_percentage_container">
+        <div class="match_percentage_number serif_text">98%</div>
+        <div class="match_percentage_label serif_text">MATCH</div>
       </div>
     </div>
   </div>
