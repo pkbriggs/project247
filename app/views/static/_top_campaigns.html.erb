@@ -2,14 +2,9 @@
 
 <div class="row">
   <!-- First campaign -->
-<<<<<<< HEAD
-  <% their_product = session[:primary_products][0] %>
-  <% matched_product = session["top_matches_#{@match_number}_product_match_1"] %>
-=======
   <% if session[:primary_products][0] %>
     <% their_product = session[:primary_products][0] %>
     <% matched_product = session["top_matches_#{@match_number}_product_match_1"] %>
->>>>>>> Updated backend to store compatible products in a better way
 
     <div class="col-md-4">
       <div class="campaign_card">
