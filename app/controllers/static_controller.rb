@@ -18,7 +18,6 @@ class StaticController < ApplicationController
 
   def quiz1_name_matches
     if request.get?
-      puts session[:possible_match_name]
       @business_name = session[:business_name]
       @image = "sweet_inspiration.jpg"
       if session[:fixed_path] == 1
