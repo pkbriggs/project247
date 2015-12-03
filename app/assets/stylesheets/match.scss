@@ -97,6 +97,7 @@
 .match_badge {
   position: absolute;
   background-size: cover;
+  z-index: 2;
   width: 68px;
   height: 85px;
   margin-left: -16px;
