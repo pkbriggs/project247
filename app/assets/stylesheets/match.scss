@@ -36,6 +36,33 @@
   .match_card_img_container {
     max-height: 130px;
     overflow: hidden;
+    position: relative;
+
+    .contact_btn_container {
+      position: absolute;
+      opacity: 0;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(150, 180, 129, 0.5);
+      transition: all 1s ease;
+
+      .contact_btn {
+        padding: 15px 10px;
+        color: white;
+        border: 2px solid white;
+        border-radius: 25px;
+        width: 150px;
+        margin: 38px auto;
+        text-align: center;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  .match_card_img_container:hover .contact_btn_container {
+    opacity: 1;
   }
 
   .match_card_bottom {
