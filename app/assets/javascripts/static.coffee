@@ -22,11 +22,11 @@ $(".static.seed_data").ready ->
 
     # Match two - seed data
     $("#top_matches_2_name").val("Tartine Bakery")
-    $("#top_matches_2_description").val("Located right next to the Mission Dolores Park, Tartine Bakery has built its reputation as the best bakery in SF.")
+    $("#top_matches_2_description").val("Located right next to the Mission Dolores Park, Tartine Bakery is the best bakery in SF.")
     $("#top_matches_2_product_match_1").val("speciality wines")
     $("#top_matches_2_product_match_2").val("croissants")
-    $("#top_matches_2_match_reason_1").val("Tartine Bakery is looking to add pies to their offerings")
-    $("#top_matches_2_match_reason_2").val("Speciality wine will pair well with dinner pies you sell")
+    $("#top_matches_2_match_reason_1").val("Tartine Bakery is looking to add pies")
+    $("#top_matches_2_match_reason_2").val("Wine pairs well with the dinner pies you sell")
     $("#top_matches_2_match_reason_3").val("Partnering will increase product visibility")
 
     # Match two - seed data
@@ -59,7 +59,7 @@ $(".static.seed_data").ready ->
     $("#top_matches_2_description").val("The Castro Theater has been around longer than most residents of the Castro, located at the heart of Castro Street.")
     $("#top_matches_2_product_match_1").val("special art exhibition")
     $("#top_matches_2_product_match_2").val("exposure")
-    $("#top_matches_2_match_reason_1").val("Opportunity to meet members of the Castro art community")
+    $("#top_matches_2_match_reason_1").val("Opportunity to the Castro art community")
     $("#top_matches_2_match_reason_2").val("Exhibtion runs for over two months")
     $("#top_matches_2_match_reason_3").val("Partnering will increase your art's visibility")
 
@@ -69,10 +69,10 @@ $(".static.seed_data").ready ->
     $("#top_matches_3_product_match_1").val("paint brushes")
     $("#top_matches_3_product_match_2").val("canvas")
     $("#top_matches_3_match_reason_1").val("Cheap and high quality art materials")
-    $("#top_matches_3_match_reason_2").val("Opportunity to meet members of the Castro art community")
+    $("#top_matches_3_match_reason_2").val("Opportunity to the Castro art community")
     $("#top_matches_3_match_reason_3").val("Close by to your location")
 
-    console.log("Done setting Sweet Inspirations seed data")
+    console.log("Done setting Bruce Kent seed data")
 
 $(".static.quiz1_verify_details").ready ->
   $("#primary_products").tagit

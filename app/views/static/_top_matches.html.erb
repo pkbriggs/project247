@@ -29,7 +29,7 @@
           <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
         </div>
 
-        <%= render partial: "static/why", :locals => {:num => 1} %>
+        <%= render partial: "static/why", :locals => {:num => 1, :last => false} %>
       </div>
       <div class="match_card_bottom">
         <h4 class="serif_text">Product Matches</h4>
@@ -70,7 +70,7 @@
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 3, :half_present => true} %>
         </div>
-        <%= render partial: "static/why", :locals => {:num => 2} %>
+        <%= render partial: "static/why", :locals => {:num => 2, :last => false} %>
       </div>
       <div class="match_card_bottom">
         <h4 class="serif_text">Product Matches</h4>
@@ -110,7 +110,7 @@
           <%= render partial: "static/stars", :locals => {:num => 4, :half_present => false} %>
         </div>
 
-        <%= render partial: "static/why", :locals => {:num => 3} %>
+        <%= render partial: "static/why", :locals => {:num => 3, :last => true} %>
       </div>
       <div class="match_card_bottom">
         <h4 class="serif_text">Product Matches</h4>

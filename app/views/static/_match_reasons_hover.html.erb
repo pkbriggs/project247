@@ -1,34 +1,37 @@
-<div class="info_overlay_container_wrapper">
-  <div class="match_reasoning_container info_overlay_container">
-    <h3 class="serif_text overlay_header">Reasons you matched</h3>
+<% container_class = "match_reasoning_container"%>
+<% if last %>
+  <% container_class = "last" %>
+<% end %>
 
-    <div class="arrow_box"></div>
+<div class="info_overlay_container <%= container_class %>">
+  <h3 class="serif_text overlay_header">Reasons you matched</h3>
 
-    <% match_base = "top_matches_1_match_reason_" %>
-    <% if match_num == 2 %>
-      <% match_base = "top_matches_2_match_reason_" %>
-    <% elsif match_num == 3 %>
-      <% match_base = "top_matches_3_match_reason_" %>
-    <% end %>
+  <div class="arrow_box"></div>
 
-    <!-- Reason #1 -->
-    <ul class="list-inline reason_line">
-        <li class="number">1</li>
-        <li class="reason"><%= session[match_base + "1"] %></li>
-    </ul>
+  <% match_base = "top_matches_1_match_reason_" %>
+  <% if match_num == 2 %>
+    <% match_base = "top_matches_2_match_reason_" %>
+  <% elsif match_num == 3 %>
+    <% match_base = "top_matches_3_match_reason_" %>
+  <% end %>
 
-    <!-- Reason #2 -->
-    <ul class="list-inline reason_line">
-        <li class="number">2</li>
-        <li class="reason"><%= session[match_base + "2"] %></li>
-    </ul>
+  <!-- Reason #1 -->
+  <ul class="list-inline reason_line">
+      <li class="number">1</li>
+      <li class="reason"><%= session[match_base + "1"] %></li>
+  </ul>
 
-    <!-- Reason #3 -->
-    <ul class="list-inline reason_line">
-        <li class="number">3</li>
-        <li class="reason"><%= session[match_base + "3"] %></li>
-    </ul>
+  <!-- Reason #2 -->
+  <ul class="list-inline reason_line">
+      <li class="number">2</li>
+      <li class="reason"><%= session[match_base + "2"] %></li>
+  </ul>
 
-    <!-- <i class="fa fa-caret-left fa-3x"></i> -->
-  </div>
+  <!-- Reason #3 -->
+  <ul class="list-inline reason_line">
+      <li class="number">3</li>
+      <li class="reason"><%= session[match_base + "3"] %></li>
+  </ul>
+
+  <!-- <i class="fa fa-caret-left fa-3x"></i> -->
 </div>
