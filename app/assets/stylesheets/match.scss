@@ -2,6 +2,18 @@
   margin-top: 40px;
 }
 
+.extra_top_matches {
+  margin-top: 20px;
+  transition: all 0.3s ease-in;
+  display: none;
+  opacity: 0.0;
+}
+
+.extra_top_matches.visible {
+  display: inherit;
+  opacity: 1.0;
+}
+
 /* Styling for match cards*/
 .match_card {
   // margin: 10px;

@@ -26,3 +26,11 @@ $(".static.match_detail").ready ->
   $("body").on "click", (e) ->
     if !$(".hidden_contact_info_container").hasClass("hidden_overlay")
       $(".hidden_contact_info_container").addClass("hidden_overlay")
+
+$(".static.matches").ready ->
+  $(".see_more_matches").click ->
+    $(".extra_top_matches").show()
+    setTimeout(->
+      $(".extra_top_matches").addClass "visible"
+    , 50)
+    $(".see_more_matches").hide()
