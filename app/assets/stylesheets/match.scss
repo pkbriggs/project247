@@ -57,6 +57,12 @@
         margin: 38px auto;
         text-align: center;
         font-size: 1.1em;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+          color: #e1e1e1;
+          border-color: #e1e1e1;
+        }
       }
     }
   }
