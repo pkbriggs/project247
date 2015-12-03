@@ -83,9 +83,11 @@ class StaticController < ApplicationController
       session[:fixed_path] = 0
       if session[:possible_match_name] == "Peasant Pies"
         session[:fixed_path] = 1
+        session[:primary_products] = ["pies", "pecans"]
       end
       if session[:possible_match_name] == "Bruce Kent"
         session[:fixed_path] = 2
+        session[:primary_products] = ["paintings", "sculptures"]
       end
 
       session[:top_matches_1_name] = default(params["top_matches_1_name"], "Sweet Delight Bakery")

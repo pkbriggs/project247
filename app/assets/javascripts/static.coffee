@@ -15,7 +15,7 @@ $(".static.seed_data").ready ->
     $("#top_matches_1_name").val("San Francisco Coffee")
     $("#top_matches_1_description").val("Founded just three months ago, San Francisco Coffee is dedicated to getting its ingredients from the local SF community.")
     $("#top_matches_1_product_match_1").val("coffee")
-    $("#top_matches_1_product_match_2").val("hot chocolate")
+    $("#top_matches_1_product_match_2").val("chocolates")
     $("#top_matches_1_match_reason_1").val("They are looking to expand their dessert options")
     $("#top_matches_1_match_reason_2").val("New business that is dedicated to the community")
     $("#top_matches_1_match_reason_3").val("Pies + coffee partnerships are incredibly popular")
