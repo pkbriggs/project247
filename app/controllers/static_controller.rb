@@ -19,6 +19,10 @@ class StaticController < ApplicationController
   def quiz1_name_matches
     if request.get?
       @business_name = session[:business_name]
+      @image = "sweet_inspiration.jpg"
+      if session[:fixed_path] == 2
+        @image = "painting.jpg"
+      end
     elsif request.post?
       session[:business_match] = (params[:match] == "yes")
       session[:quiz_complete] = 2 if session[:quiz_complete] != 5
@@ -57,20 +61,18 @@ class StaticController < ApplicationController
   end
 
   def matches
-    @background_images = ["business_backdrop1.png", "business_backdrop2.png", "business_backdrop3.png"]
-    if session[:fixed_path] == 2
-      @background_images = ["business_backdrop3.png", "castro_theater.jpg", "art_store.jpg"]
-    end
+    @background_images = set_background_images()
   end
 
   def match_detail
     @match_number = params[:match]
+    images = set_background_images()
+    @image = images[@match_number.to_i - 1]
   end
 
   def seed_data
     if request.post?
       lorem_ipsum = "Lorem ipsum sit amet, consectur adipiscing elit sed do eiusmod tempor inciditunt ut labore et dolore magnum."
-
 
       session[:possible_match_name] = default(params["possible_match_name"], "Sweet Inspriations")
       session[:possible_match_address] = default(params["possible_match_address"], "555 Main Street, San Francisco, CA, 82135")
@@ -130,6 +132,8 @@ class StaticController < ApplicationController
       session[:possible_match_name] = "Sweet Inspriations" if !session[:possible_match_name]
       session[:possible_match_address] = "555 Main Street, San Francisco, CA, 82135" if !session[:possible_match_address]
 
+      session[:fixed_path] = 1
+
       session[:top_matches_1_name] = "Sweet Delight Bakery" if !session[:top_matches_1_name]
       session[:top_matches_1_description] =  lorem_ipsum if !session[:top_matches_1_description]
       session[:top_matches_1_product_match_1] = "cupcakes" if !session[:top_matches_1_product_match_1]
@@ -174,6 +178,15 @@ class StaticController < ApplicationController
 
       session[:quiz_complete] = 5 # Marks that we  don't need to set defaults again
     end
+  end
+
+  def set_background_images()
+    images = ["business_backdrop1.png", "business_backdrop2.png", "business_backdrop3.png"]
+    if session[:fixed_path] == 2
+      images = ["business_backdrop3.png", "castro_theater.jpg", "art_store.jpg"]
+    end
+
+    return images
   end
 
 end
