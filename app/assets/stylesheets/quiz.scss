@@ -132,7 +132,8 @@ label {
 
 // Name entry page
 .backdrop {
-  background-image: image-url("newbg.jpg");
+  background-image: image-url("market_backdrop_lighter.jpg");
+  background-position: center center;
   background-size: cover;
 
   overflow: hidden; // prevent bootstrap row from going off of page

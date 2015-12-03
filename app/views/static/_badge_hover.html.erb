@@ -1,0 +1,23 @@
+<% if badge_type == "services_needed" %>
+  <% header_text = "Your Services Needed!" %>
+  <% body_text = "This company is signed up with LocalLink and is specifically looking for:" %>
+  <% focus_text = session[:primary_products][0] %>
+<% elsif badge_type == "locallink_member" %>
+  <% header_text = "LocalLink Member!" %>
+  <% body_text = "This company is signed up with LocalLink. This generally means this company is more interested in finding local matches." %>
+<% end %>
+
+<div class="info_overlay_container_wrapper">
+  <div class="badge_explanation_container info_overlay_container">
+    <h3 class="serif_text overlay_big_header"><%= header_text %></h3>
+
+    <div class="arrow_box"></div>
+
+    <div>
+      <%= body_text %>
+      <% if focus_text %>
+        <span class="focus_text"><%= focus_text %></span>.
+      <% end %>
+    </div>
+  </div>
+</div>

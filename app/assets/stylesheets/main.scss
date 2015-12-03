@@ -121,10 +121,14 @@ a:focus {
   }
 }
 
+.backdrop_header_text {
+  padding-top: 68px; // to account for navbar
+}
+
 .smaller_backdrop {
   height: 250px;
+}
 
-  .backdrop_header_text {
-    padding-top: 68px; // to account for navbar
-  }
+.even_smaller_backdrop {
+  height: 200px;
 }
