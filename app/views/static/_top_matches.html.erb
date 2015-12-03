@@ -2,6 +2,8 @@
   <!-- First match -->
   <div class="col-md-4 col-sm-6 col-xs-12">
     <a class="match_card" href="/match_detail?match=1">
+      <div class="service_needed_badge match_badge"></div>
+      <%= render partial: "static/badge_hover", :locals => {:badge_type => "services_needed"} %>
       <div class="match_card_img_container">
         <%= image_tag "business_backdrop1.png", class: "full_width" %>
       </div>
@@ -20,7 +22,7 @@
             </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
-          <%= render partial: "static/hover", :locals => {:match_num => 1} %>
+          <%= render partial: "static/match_reasons_hover", :locals => {:match_num => 1} %>
         </ul>
         <p><%= session[:top_matches_1_description] %></p>
         <div class="yelp_review_container">
@@ -41,6 +43,8 @@
   <!-- Second match -->
   <div class="col-md-4 col-sm-6 col-xs-12">
     <a class="match_card" href="/match_detail?match=2">
+      <div class="locallink_badge match_badge"></div>
+      <%= render partial: "static/badge_hover", :locals => {:badge_type => "locallink_member"} %>
       <div class="match_card_img_container">
         <%= image_tag "business_backdrop2.png", class: "full_width" %>
       </div>
@@ -59,7 +63,7 @@
             </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
-          <%= render partial: "static/hover", :locals => {:match_num => 2} %>
+          <%= render partial: "static/match_reasons_hover", :locals => {:match_num => 2} %>
         </ul>
         <p><%= session[:top_matches_2_description] %></p>
         <div class="yelp_review_container">
@@ -98,7 +102,7 @@
             </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
-          <%= render partial: "static/hover", :locals => {:match_num => 3} %>
+          <%= render partial: "static/match_reasons_hover", :locals => {:match_num => 3} %>
         </ul>
         <p><%= session[:top_matches_3_description] %></p>
         <div class="yelp_review_container">

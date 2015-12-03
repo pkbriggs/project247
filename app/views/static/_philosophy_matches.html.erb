@@ -18,7 +18,7 @@
             <span class="match_distance_number olive_text serif_text"><%= rand(0..5) %></span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
-          <%= render partial: "static/hover", :locals => {:match_num => 2} %>
+          <%= render partial: "static/match_reasons_hover", :locals => {:match_num => 2} %>
         </ul>
         <p><%= session[:top_matches_2_description] %></p>
         <div class="yelp_review_container">
@@ -55,7 +55,7 @@
             <span class="match_distance_number olive_text serif_text"><%= rand(0..15) %></span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
-          <%= render partial: "static/hover", :locals => {:match_num => 3} %>
+          <%= render partial: "static/match_reasons_hover", :locals => {:match_num => 3} %>
         </ul>
         <p><%= session[:top_matches_3_description] %></p>
         <div class="yelp_review_container">
