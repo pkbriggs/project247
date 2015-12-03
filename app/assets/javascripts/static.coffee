@@ -36,9 +36,7 @@ $(".static.seed_data").ready ->
     $("#top_matches_3_product_match_2").val("flower vases")
     $("#top_matches_3_match_reason_1").val("Dessert pies pair well with flowers as gifts")
     $("#top_matches_3_match_reason_2").val("Increased visibility for both businesses")
-    $("#top_matches_3_match_reason_3").val("Perfect complimentary products for the holidays")
-
-    console.log("Done setting Peasant Pies seed data")
+    $("#top_matches_3_match_reason_3").val("Great pairing for the holidays")
 
   $("#fixed-path-2").on "click", ->
     $("#possible_match_name").val("Bruce Kent")
@@ -70,8 +68,6 @@ $(".static.seed_data").ready ->
     $("#top_matches_3_match_reason_1").val("Cheap and high quality art materials")
     $("#top_matches_3_match_reason_2").val("Opportunity to the Castro art community")
     $("#top_matches_3_match_reason_3").val("Close by to your location")
-
-    console.log("Done setting Bruce Kent seed data")
 
 $(".static.quiz1_verify_details").ready ->
   $("#primary_products").tagit
