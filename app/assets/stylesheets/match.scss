@@ -1,3 +1,5 @@
+@import "variables";
+
 .match_type_section {
   margin-top: 40px;
 }
@@ -73,8 +75,8 @@
         transition: all 0.2s ease-in;
 
         &:hover {
-          color: #e1e1e1;
-          border-color: #e1e1e1;
+          color: $button_hover_color;
+          border-color: $button_hover_color;
         }
       }
     }

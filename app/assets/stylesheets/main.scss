@@ -3,15 +3,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import "variables";
 @import "font-awesome";
 @import "static";
 @import "match";
 @import "match_reason_hover";
 @import "quiz";
 @import "homepage";
-
-// variables
-$navbar_height: 60px;
 
 // styles
 
@@ -132,8 +130,8 @@ a:focus {
 
       &:hover {
         text-decoration: none;
-        border-color: #E1E1E1;
-        color: #E1E1E1;
+        border-color: $button_hover_color;
+        color: $button_hover_color;
       }
     }
   }
