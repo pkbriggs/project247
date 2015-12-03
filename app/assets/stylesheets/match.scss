@@ -61,10 +61,6 @@
     }
   }
 
-  .match_card_img_container:hover .contact_btn_container {
-    opacity: 1;
-  }
-
   .match_card_bottom {
     padding: 5px 20px;
   }
@@ -91,6 +87,10 @@
       margin-top: 8px;
     }
   }
+}
+
+.match_card:hover .contact_btn_container {
+  opacity: 1;
 }
 
 // badges
