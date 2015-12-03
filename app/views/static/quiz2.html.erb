@@ -22,6 +22,35 @@
       <%= label_tag "average_num_daily_customers", "On average, how many customers do you serve per day?", class: "block_element form_label serif_text first_form_input_spacing" %>
       <%= number_field_tag "average_num_daily_customers", nil, within: 1...100000, class: "input_field quiz_input_field medium_tall_input_field" %>
 
+
+      <%= label_tag "average_num_daily_customers", "How far would you like us to look for potential matches?", class: "block_element form_label serif_text first_form_input_spacing" %>
+      <div>
+        <%= radio_button_tag "average_num_daily_customers", "1" %>
+        <%= label_tag "community_involvement_1", "0-5 miles", class: "radio_button_label" %>
+      </div>
+      <div>
+        <%= radio_button_tag "average_num_daily_customers", "2" %>
+        <%= label_tag "community_involvement_2", "6-15 miles", class: "radio_button_label" %>
+      </div>
+      <div>
+        <%= radio_button_tag "average_num_daily_customers", "3" %>
+        <%= label_tag "community_involvement_3", "16-30 miles", class: "radio_button_label" %>
+      </div>
+      <div>
+        <%= radio_button_tag "average_num_daily_customers", "4" %>
+        <%= label_tag "community_involvement_4", "30+ miles", class: "radio_button_label" %>
+      </div>
+      <div class="small_margin_bottom">
+        <%= radio_button_tag "average_num_daily_customers", "0" %>
+        <%= label_tag "community_involvement_0", "Location is not important to me", class: "radio_button_label" %>
+      </div>
+
+
+
+
+
+
+
       <%= label_tag "most_known_product", "What product are you most known for?", class: "block_element serif_text form_label form_input_spacing" %>
       <%= text_field_tag "most_known_product", nil, class: "input_field quiz_input_field medium_tall_input_field" %>
 
