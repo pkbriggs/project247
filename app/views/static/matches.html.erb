@@ -10,22 +10,26 @@
 
 <div class="container">
   <section class="match_type_section">
-    <h2 class="serif_header_text">Top Matches</h2>
+    <h2 class="serif_header_text">Top Matches (5)</h2>
     <%= render partial: "static/top_matches" %>
+    <div class="see_more_matches">
+      see more matches
+      <i class="fa fa-angle-down"></i>
+    </div>
   </section>
 
   <section class="match_type_section">
-    <h2 class="serif_header_text">Nearest Matches by Location</h2>
+    <h2 class="serif_header_text">Nearest Matches by Location (2)</h2>
     <%= render partial: "static/location_matches" %>
   </section>
 
   <section class="match_type_section">
-    <h2 class="serif_header_text">Matches by Product Compatability</h2>
+    <h2 class="serif_header_text">Matches by Product Compatability (1)</h2>
     <%= render partial: "static/compatability_matches" %>
   </section>
 
   <section class="match_type_section">
-    <h2 class="serif_header_text">Matches by Business Philosophy</h2>
+    <h2 class="serif_header_text">Matches by Business Philosophy (2)</h2>
     <%= render partial: "static/philosophy_matches" %>
   </section>
 </div>

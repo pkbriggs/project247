@@ -125,3 +125,88 @@
     </a>
   </div>
 </div>
+
+<div class="row extra_top_matches">
+  <!-- Second match -->
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <a class="match_card" href="/match_detail?match=2">
+      <div class="locallink_badge match_badge"></div>
+      <%= render partial: "static/badge_hover", :locals => {:badge_type => "locallink_member"} %>
+      <div class="match_card_img_container">
+        <%= image_tag "business_backdrop2.png", class: "full_width" %>
+        <%= render partial: "static/contact_btn" %>
+      </div>
+
+      <div class="match_card_content">
+        <h1 class="serif_header_text top_header no_margin_bottom"><%= session[:top_matches_2_name] %></h1>
+        <ul class="list-inline match_card_content_detail">
+          <li class="no_padding_left match_percent olive_text serif_text">
+            <span class="match_percent_number olive_text serif_text">95%</span>
+            <span class="match_percent_text olive_text serif_text">MATCH</span>
+          </li>
+          <li class="address no_padding_right"><i class="fa fa-map-marker olive_text"></i></li>
+          <li class="address no_padding_left olive_text serif_text">
+            <span class="match_distance_number olive_text serif_text">
+              <%= rand(1..15) %>
+            </span>
+            <span class="match_distance_text olive_text serif_text">MI</span>
+          </li>
+        </ul>
+        <p><%= session[:top_matches_2_description] %></p>
+        <div class="yelp_review_container">
+          <%= render partial: "static/stars", :locals => {:num => 3, :half_present => true} %>
+        </div>
+        <%= render partial: "static/why", :locals => {:num => 1} %>
+      </div>
+      <div class="match_card_bottom">
+        <h4 class="serif_text">Product Matches</h4>
+        <ul class="list-inline">
+          <li><%= session[:top_matches_2_product_match_1] %></li>
+          <li><%= session[:top_matches_2_product_match_2] %></li>
+        </ul>
+        <!-- <a class="block_element button" href="/match_detail?name=Bob's%20Bakery">Learn More</a> -->
+      </div>
+    </a>
+  </div>
+
+  <!-- Last match -->
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <a class="match_card" href="/match_detail?match=3">
+      <div class="match_card_img_container">
+        <%= image_tag "business_backdrop3.png", class: "full_width" %>
+        <%= render partial: "static/contact_btn" %>
+      </div>
+
+      <div class="match_card_content">
+        <h1 class="serif_header_text top_header no_margin_bottom"><%= session[:top_matches_3_name] %></h1>
+        <ul class="list-inline match_card_content_detail">
+          <li class="no_padding_left match_percent olive_text serif_text">
+            <span class="match_percent_number olive_text serif_text">93%</span>
+            <span class="match_percent_text olive_text serif_text">MATCH</span>
+          </li>
+          <li class="address no_padding_right"><i class="fa fa-map-marker olive_text"></i></li>
+          <li class="address no_padding_left olive_text serif_text">
+            <span class="match_distance_number olive_text serif_text">
+              <%= rand(1..25) %>
+            </span>
+            <span class="match_distance_text olive_text serif_text">MI</span>
+          </li>
+        </ul>
+        <p><%= session[:top_matches_3_description] %></p>
+        <div class="yelp_review_container">
+          <%= render partial: "static/stars", :locals => {:num => 4, :half_present => false} %>
+        </div>
+
+        <%= render partial: "static/why", :locals => {:num => 1} %>
+      </div>
+      <div class="match_card_bottom">
+        <h4 class="serif_text">Product Matches</h4>
+        <ul class="list-inline">
+          <li><%= session[:top_matches_3_product_match_1] %></li>
+          <li><%= session[:top_matches_3_product_match_2] %></li>
+        </ul>
+        <!-- <a class="block_element button" href="/match_detail?name=Bob's%20Bakery">Learn More</a> -->
+      </div>
+    </a>
+  </div>
+</div>
