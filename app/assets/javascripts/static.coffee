@@ -27,10 +27,25 @@ $(".static.match_detail").ready ->
     if !$(".hidden_contact_info_container").hasClass("hidden_overlay")
       $(".hidden_contact_info_container").addClass("hidden_overlay")
 
-$(".static.matches").ready ->
-  $(".see_more_matches").click ->
+# Matches page
+enableSeeMoreMatches = ->
+  $(".see_more_matches").one "click", ->
     $(".extra_top_matches").show()
     setTimeout(->
       $(".extra_top_matches").addClass "visible"
     , 50)
-    $(".see_more_matches").hide()
+    $(".see_more_matches").html("See fewer matches <i class='fa fa-angle-up'></i>")
+    enableSeeLessMatches()
+
+enableSeeLessMatches = ->
+  $(".see_more_matches").one "click", ->
+    $(".extra_top_matches").removeClass "visible"
+    setTimeout(->
+      $(".extra_top_matches").hide()
+    , 300)
+    $(".see_more_matches").html("See more matches <i class='fa fa-angle-down'></i>")
+    enableSeeMoreMatches()
+
+$(".static.matches").ready ->
+  enableSeeMoreMatches()
+
