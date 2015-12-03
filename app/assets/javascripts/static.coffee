@@ -18,5 +18,9 @@ $(".static.match_detail").ready ->
   $(".contact_info_card").on "click", (e) ->
     e.stopPropagation()
 
+  $(".fa-times").on "click", (e) ->
+    $(".hidden_contact_info_container").addClass("hidden_overlay")
+    e.stopPropagation()
+
   $("body").on "click", (e) ->
     $(".hidden_contact_info_container").addClass("hidden_overlay")

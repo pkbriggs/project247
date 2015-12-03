@@ -499,8 +499,26 @@
     width: 325px;
     margin: 10% auto;
     padding: 40px;
+    position: relative;
+
+    .fa-times {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      opacity: 0.6;
+    }
+
+    .fa-times:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .larger {
+      font-size: 1.3rem;
+    }
 
     .business_person_and_phone_and_email {
+      margin-top: 20px;
 
       div {
         margin-top: 8px;
