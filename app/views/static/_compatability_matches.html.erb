@@ -21,12 +21,13 @@
             </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
-          <%= render partial: "static/match_reasons_hover", :locals => {:match_num => 3} %>
         </ul>
         <p><%= session[:top_matches_3_description] %></p>
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 4, :half_present => true} %>
         </div>
+
+        <%= render partial: "static/why", :locals => {:num => 1} %>
       </div>
       <div class="match_card_bottom">
         <h4 class="serif_text">Compatible Products</h4>
