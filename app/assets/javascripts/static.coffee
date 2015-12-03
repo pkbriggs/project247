@@ -19,8 +19,10 @@ $(".static.match_detail").ready ->
     e.stopPropagation()
 
   $(".fa-times").on "click", (e) ->
-    $(".hidden_contact_info_container").addClass("hidden_overlay")
-    e.stopPropagation()
+    if !$(".hidden_contact_info_container").hasClass("hidden_overlay")
+      $(".hidden_contact_info_container").addClass("hidden_overlay")
+      e.stopPropagation()
 
   $("body").on "click", (e) ->
-    $(".hidden_contact_info_container").addClass("hidden_overlay")
+    if !$(".hidden_contact_info_container").hasClass("hidden_overlay")
+      $(".hidden_contact_info_container").addClass("hidden_overlay")
