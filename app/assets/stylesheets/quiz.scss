@@ -244,7 +244,7 @@ label {
 .progress_bar {
   display: flex;
   align-items: center;
-  padding-top: 80px; // to account for navbar + some extra
+  padding-top: ($navbar_height + 12px); // to account for navbar + some extra
 
   .progress_bar_step {
     font-size: 1.5em;

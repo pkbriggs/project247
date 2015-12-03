@@ -9,6 +9,11 @@
 @import "quiz";
 @import "homepage";
 
+// variables
+$navbar_height: 60px;
+
+// styles
+
 html, body {
   height: 100%;
 }
@@ -72,7 +77,7 @@ a:focus {
 .content_container {
   overflow-x: hidden;
   height: 100%;
-  // padding-top: 68px; // height of the navbar
+  // padding-top: $navbar_height; // height of the navbar
 }
 
 .navbar {
@@ -83,7 +88,7 @@ a:focus {
   padding-left: 30px;
   padding-right: 30px;
   width: 100%;
-  height: 68px;
+  height: $navbar_height;
   background-color: rgba(150, 180, 129, 0.83);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.22);
   border-radius: 0px;
@@ -92,6 +97,13 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    .logo_image {
+      background-image: image-url("locallink_logo.png");
+      background-size: cover;
+      height: 40px;
+      width: 92px;
+    }
 
     span {
       font-size: 1.4em;
@@ -106,23 +118,28 @@ a:focus {
     flex-grow: 1;
     flex-wrap: wrap;
 
-    span {
+    a {
       padding: 5px 20px;
       color: #FFF;
       border: 2px solid #FFF;
       border-radius: 25px;
       margin: 0px 20px;
-      transition: all 1s ease;
-    }
-
-    span:hover {
       cursor: pointer;
+      width: 100px;
+      text-align: center;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        text-decoration: none;
+        border-color: #E1E1E1;
+        color: #E1E1E1;
+      }
     }
   }
 }
 
 .backdrop_header_text {
-  padding-top: 68px; // to account for navbar
+  padding-top: $navbar_height; // to account for navbar
 }
 
 .smaller_backdrop {
