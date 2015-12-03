@@ -379,7 +379,7 @@
 
 // Original CSS for inner match page
 .inner_match_page_top_container {
-  margin-top: ($navbar_height + 10px); // I'm sorry, I don't know why this needs a + 10, but it's just wrong otherwise
+  margin-top: $navbar_height;
   box-shadow: 0px 2px 2px #e2e2e2;
 
   .flex {
