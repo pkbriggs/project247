@@ -5,7 +5,7 @@
       <div class="service_needed_badge match_badge"></div>
       <%= render partial: "static/badge_hover", :locals => {:badge_type => "services_needed"} %>
       <div class="match_card_img_container">
-        <%= image_tag "business_backdrop1.png", class: "full_width" %>
+        <%= image_tag images[0], class: "full_width" %>
         <%= render partial: "static/contact_btn" %>
       </div>
 
@@ -37,7 +37,6 @@
           <li><%= session[:top_matches_1_product_match_1] %></li>
           <li><%= session[:top_matches_1_product_match_2] %></li>
         </ul>
-        <!-- <a class="block_element button" href="/match_detail?name=Bob's%20Bakery">Learn More</a> -->
       </div>
     </a>
   </div>
@@ -48,7 +47,7 @@
       <div class="locallink_badge match_badge"></div>
       <%= render partial: "static/badge_hover", :locals => {:badge_type => "locallink_member"} %>
       <div class="match_card_img_container">
-        <%= image_tag "business_backdrop2.png", class: "full_width" %>
+        <%= image_tag images[1], class: "full_width" %>
         <%= render partial: "static/contact_btn" %>
       </div>
 
@@ -71,7 +70,7 @@
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 3, :half_present => true} %>
         </div>
-        <%= render partial: "static/why", :locals => {:num => 1} %>
+        <%= render partial: "static/why", :locals => {:num => 2} %>
       </div>
       <div class="match_card_bottom">
         <h4 class="serif_text">Product Matches</h4>
@@ -79,7 +78,6 @@
           <li><%= session[:top_matches_2_product_match_1] %></li>
           <li><%= session[:top_matches_2_product_match_2] %></li>
         </ul>
-        <!-- <a class="block_element button" href="/match_detail?name=Bob's%20Bakery">Learn More</a> -->
       </div>
     </a>
   </div>
@@ -88,7 +86,7 @@
   <div class="col-md-4 col-sm-6 col-xs-12">
     <a class="match_card" href="/match_detail?match=3">
       <div class="match_card_img_container">
-        <%= image_tag "business_backdrop3.png", class: "full_width" %>
+        <%= image_tag images[2], class: "full_width" %>
         <%= render partial: "static/contact_btn" %>
       </div>
 
@@ -112,7 +110,7 @@
           <%= render partial: "static/stars", :locals => {:num => 4, :half_present => false} %>
         </div>
 
-        <%= render partial: "static/why", :locals => {:num => 1} %>
+        <%= render partial: "static/why", :locals => {:num => 3} %>
       </div>
       <div class="match_card_bottom">
         <h4 class="serif_text">Product Matches</h4>
@@ -120,7 +118,6 @@
           <li><%= session[:top_matches_3_product_match_1] %></li>
           <li><%= session[:top_matches_3_product_match_2] %></li>
         </ul>
-        <!-- <a class="block_element button" href="/match_detail?name=Bob's%20Bakery">Learn More</a> -->
       </div>
     </a>
   </div>
