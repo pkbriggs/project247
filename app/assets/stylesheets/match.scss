@@ -1,3 +1,5 @@
+@import "variables";
+
 .match_type_section {
   margin-top: 40px;
 }
@@ -22,8 +24,10 @@
   border-radius: 2px;
   background: #fefefe;
   box-shadow: 0px 1px 2px #efefef;
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: background-color 0.2s ease-in;
+  height: 383px;
 
   &:hover {
     text-decoration: none;
@@ -71,8 +75,8 @@
         transition: all 0.2s ease-in;
 
         &:hover {
-          color: #e1e1e1;
-          border-color: #e1e1e1;
+          color: $button_hover_color;
+          border-color: $button_hover_color;
         }
       }
     }
@@ -83,6 +87,9 @@
   }
 
   .match_card_content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     padding: 10px 20px;
     box-shadow: 0px 2px 2px #E2E2E2;
     position: relative; // need so box shadow shows
@@ -91,6 +98,10 @@
       font-size: 1.1em;
       margin-bottom: -2px;
       margin-top: 5px;
+    }
+
+    p {
+      flex-grow: 1;
     }
   }
 
@@ -171,89 +182,6 @@
 
   .match_percent_text, .match_distance_text {
     font-size: 0.75rem;
-  }
-}
-
-.why {
-  width: 200px;
-
-  .match_reasoning_container_wrapper {
-    position: relative;
-    z-index: 3;
-  }
-
-  .match_reasoning_container {
-    position: absolute;
-    top: -57px;
-    right: -250px;
-    z-index: 20;
-    background-color: rgba(255, 255, 255, 0.93);
-    border: 1px solid #EBEBEB;
-    border-radius: 8px;
-    padding: 15px;
-    transition: all 1s ease;
-    opacity: 0.0;
-    pointer-events: none;
-    transition: opacity 0.15s ease-in;
-
-    .match_reasoning_header {
-      font-size: 1.05em;
-      margin: 0;
-      margin-bottom: 6px;
-    }
-
-    .arrow_box {
-      position: absolute;
-      left: 0px;
-      background: #ffffff;
-    }
-    .arrow_box:after, .arrow_box:before {
-      right: 100%;
-      top: 75%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-
-    .arrow_box:after {
-      border-color: rgba(255, 255, 255, 0);
-      border-right-color: #ffffff;
-      border-width: 13px;
-      margin-top: -13px;
-    }
-    .arrow_box:before {
-      border-color: rgba(235, 235, 235, 0);
-      border-right-color: #EBEBEB;
-      border-width: 14px;
-      margin-top: -14px;
-    }
-  }
-}
-
-.why:hover .match_reasoning_container {
-  opacity: 1.0;
-  pointer-events: all;
-}
-
-.why p {
-  color: #A5A5A5;
-  transition: all 0.15s ease;
-  position: relative;
-
-  .fa-question-circle {
-    margin-right: 5px;
-    opacity: .6;
-  }
-}
-
-.why p:hover {
-  color: #222222;
-
-  .fa-question-circle {
-    opacity: 1;
   }
 }
 
@@ -350,22 +278,23 @@
 
 .inner_match_image_container {
   min-width: 270px;
-  height: 250px;
+  max-width: 370px;
+  width: 40%;
+  height: 260px;
 
-  background: url("sweet_inspiration.jpg");
   background-size: cover;
 }
 
 .inner_match_content_container {
   width: 100%;
-  max-height: 250px;
+  max-height: 260px;
   overflow-y: hidden;
 
   .name_and_contact_container {
     display: flex;
 
     .name_and_contact_info {
-      padding: 17px 20px 0px 20px;
+      padding: 26px 20px 0px 30px;
 
       h1 {
         margin: 0px;
@@ -396,7 +325,7 @@
 }
 
 .description_and_rating_container {
-  padding: 0px 20px;
+  padding: 0px 30px;
 
   .description {
     margin-bottom: 15px;
@@ -414,7 +343,7 @@
   width: 100%;
   background-color: #FBFBFB;
   border: 1px solid #F5F5F5;
-  padding: 5px 20px;
+  padding: 5px 30px;
 
   .popular_products_container {
     .popular_products_header {
@@ -450,7 +379,7 @@
 
 // Original CSS for inner match page
 .inner_match_page_top_container {
-  margin-top: ($navbar_height + 10px); // I'm sorry, I don't know why this needs a + 10, but it's just wrong otherwise
+  margin-top: $navbar_height;
   box-shadow: 0px 2px 2px #e2e2e2;
 
   .flex {
