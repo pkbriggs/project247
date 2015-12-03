@@ -57,7 +57,10 @@ class StaticController < ApplicationController
   end
 
   def matches
-
+    @background_images = ["business_backdrop1.png", "business_backdrop2.png", "business_backdrop3.png"]
+    if session[:fixed_path] == 2
+      @background_images = ["business_backdrop3.png", "castro_theater.jpg", "art_store.jpg"]
+    end
   end
 
   def match_detail
@@ -68,8 +71,14 @@ class StaticController < ApplicationController
     if request.post?
       lorem_ipsum = "Lorem ipsum sit amet, consectur adipiscing elit sed do eiusmod tempor inciditunt ut labore et dolore magnum."
 
+
       session[:possible_match_name] = default(params["possible_match_name"], "Sweet Inspriations")
       session[:possible_match_address] = default(params["possible_match_address"], "555 Main Street, San Francisco, CA, 82135")
+
+      session[:fixed_path] = 1
+      if session[:possible_match_name] == "Bruce Kent"
+        session[:fixed_path] = 2
+      end
 
       session[:top_matches_1_name] = default(params["top_matches_1_name"], "Sweet Delight Bakery")
       session[:top_matches_1_description] = default(params["top_matches_1_description"], lorem_ipsum)

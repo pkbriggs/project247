@@ -56,21 +56,21 @@ $(".static.seed_data").ready ->
 
     # Match two - seed data
     $("#top_matches_2_name").val("The Castro Theater")
-    $("#top_matches_2_description").val("The Castro Theater has been around longer than most residents of the Castro, located at the heart of Castro Street. Any good movie lover has spent time at the Castro catching a movie or performance.")
+    $("#top_matches_2_description").val("The Castro Theater has been around longer than most residents of the Castro, located at the heart of Castro Street.")
     $("#top_matches_2_product_match_1").val("special art exhibition")
-    $("#top_matches_2_product_match_2").val("")
+    $("#top_matches_2_product_match_2").val("exposure")
     $("#top_matches_2_match_reason_1").val("Opportunity to meet members of the Castro art community")
     $("#top_matches_2_match_reason_2").val("Exhibtion runs for over two months")
     $("#top_matches_2_match_reason_3").val("Partnering will increase your art's visibility")
 
     # Match two - seed data
-    $("#top_matches_3_name").val("")
-    $("#top_matches_3_description").val("")
-    $("#top_matches_3_product_match_1").val("")
-    $("#top_matches_3_product_match_2").val("")
-    $("#top_matches_3_match_reason_1").val("")
-    $("#top_matches_3_match_reason_2").val("")
-    $("#top_matches_3_match_reason_3").val("")
+    $("#top_matches_3_name").val("Canvas Works")
+    $("#top_matches_3_description").val("Founded 10 years ago by two local artists, Canvas Works provides art supplies at a low price.")
+    $("#top_matches_3_product_match_1").val("paint brushes")
+    $("#top_matches_3_product_match_2").val("canvas")
+    $("#top_matches_3_match_reason_1").val("Cheap and high quality art materials")
+    $("#top_matches_3_match_reason_2").val("Opportunity to meet members of the Castro art community")
+    $("#top_matches_3_match_reason_3").val("Close by to your location")
 
     console.log("Done setting Sweet Inspirations seed data")
 
