@@ -20,12 +20,13 @@
             </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
-          <%= render partial: "static/hover", :locals => {:match_num => 2} %>
         </ul>
         <p><%= session[:top_matches_2_description] %></p>
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 4, :half_present => false} %>
         </div>
+
+        <%= render partial: "static/why", :locals => {:num => 1} %>
       </div>
       <div class="match_card_bottom">
         <h4 class="serif_text">Product Matches</h4>
@@ -59,12 +60,13 @@
             </span>
             <span class="match_distance_text olive_text serif_text">MI</span>
           </li>
-          <%= render partial: "static/hover", :locals => {:match_num => 3} %>
         </ul>
         <p><%= session[:top_matches_3_description] %></p>
         <div class="yelp_review_container">
           <%= render partial: "static/stars", :locals => {:num => 3, :half_present => true} %>
         </div>
+
+        <%= render partial: "static/why", :locals => {:num => 1} %>
       </div>
       <div class="match_card_bottom">
         <h4 class="serif_text">Products Matches</h4>
