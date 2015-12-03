@@ -10,7 +10,7 @@ class StaticController < ApplicationController
 
   def quiz1_business_name
     if request.post?
-      session[:business_name] = default(params["business_name"], "Sweet Inspriations")
+      session[:business_name] = default(params["business_name"], "Sweet Inspirations")
       session[:quiz_complete] = 1 if session[:quiz_complete] != 5
       redirect_to action: "quiz1_name_matches"
     end
@@ -20,7 +20,9 @@ class StaticController < ApplicationController
     if request.get?
       @business_name = session[:business_name]
       @image = "sweet_inspiration.jpg"
-      if session[:fixed_path] == 2
+      if session[:fixed_path] == 1
+        @image = "pies.jpg"
+      elsif session[:fixed_path] == 2
         @image = "painting.jpg"
       end
     elsif request.post?
@@ -32,7 +34,7 @@ class StaticController < ApplicationController
 
   def quiz1_verify_details
     if request.post?
-      session[:business_name] = default(params[:business_name], "Sweet Inspriations")
+      session[:business_name] = default(params[:business_name], "Sweet Inspirations")
       session[:address] = default(params[:address], "123 Main Street, San Francisco, CA, 12345")
       session[:primary_products] = default(params[:primary_products].split(","), ["cake", "coffee"])
       session[:quiz_complete] = 3 if session[:quiz_complete] != 5
@@ -77,7 +79,10 @@ class StaticController < ApplicationController
       session[:possible_match_name] = default(params["possible_match_name"], "Sweet Inspriations")
       session[:possible_match_address] = default(params["possible_match_address"], "555 Main Street, San Francisco, CA, 82135")
 
-      session[:fixed_path] = 1
+      session[:fixed_path] = 0
+      if session[:possible_match_name] == "Peasant Pies"
+        session[:fixed_path] = 1
+      end
       if session[:possible_match_name] == "Bruce Kent"
         session[:fixed_path] = 2
       end
@@ -132,7 +137,7 @@ class StaticController < ApplicationController
       session[:possible_match_name] = "Sweet Inspriations" if !session[:possible_match_name]
       session[:possible_match_address] = "555 Main Street, San Francisco, CA, 82135" if !session[:possible_match_address]
 
-      session[:fixed_path] = 1
+      session[:fixed_path] = 0 if !session[:fixed_path]
 
       session[:top_matches_1_name] = "Sweet Delight Bakery" if !session[:top_matches_1_name]
       session[:top_matches_1_description] =  lorem_ipsum if !session[:top_matches_1_description]
@@ -181,8 +186,11 @@ class StaticController < ApplicationController
   end
 
   def set_background_images()
-    images = ["business_backdrop1.png", "business_backdrop2.png", "business_backdrop3.png"]
-    if session[:fixed_path] == 2
+    if session[:fixed_path] == 0 # Default path
+      images = ["bakery.jpg", "coffee_shop.jpg", "tea_shop.jpg"]
+    elsif session[:fixed_path] == 1
+      images = ["coffee_shop.jpg", "bakery.jpg", "flowers.jpg"]
+    elsif session[:fixed_path] == 2
       images = ["business_backdrop3.png", "castro_theater.jpg", "art_store.jpg"]
     end
 

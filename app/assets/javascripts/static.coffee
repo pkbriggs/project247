@@ -8,37 +8,37 @@ $(".static.index").ready ->
 
 $(".static.seed_data").ready ->
   $("#fixed-path-1").on "click", ->
-    $("#possible_match_name").val("Sweet Inspirations")
-    $("#possible_match_address").val("2239 Market Street, San Francisco CA 94114")
+    $("#possible_match_name").val("Peasant Pies")
+    $("#possible_match_address").val("4108 24th St, San Francisco, CA 94114")
 
     # Match One - seed data
-    $("#top_matches_1_name").val("")
-    $("#top_matches_1_description").val("")
-    $("#top_matches_1_product_match_1").val("")
-    $("#top_matches_1_product_match_2").val("")
-    $("#top_matches_1_match_reason_1").val("")
-    $("#top_matches_1_match_reason_2").val("")
-    $("#top_matches_1_match_reason_3").val("")
+    $("#top_matches_1_name").val("San Francisco Coffee")
+    $("#top_matches_1_description").val("Founded just three months ago, San Francisco Coffee is dedicated to getting its ingredients from the local SF community.")
+    $("#top_matches_1_product_match_1").val("coffee")
+    $("#top_matches_1_product_match_2").val("hot chocolate")
+    $("#top_matches_1_match_reason_1").val("They are looking to expand their dessert options")
+    $("#top_matches_1_match_reason_2").val("New business that is dedicated to the community")
+    $("#top_matches_1_match_reason_3").val("Pies + coffee partnerships are incredibly popular")
 
     # Match two - seed data
-    $("#top_matches_2_name").val("")
-    $("#top_matches_2_description").val("")
-    $("#top_matches_2_product_match_1").val("")
-    $("#top_matches_2_product_match_2").val("")
-    $("#top_matches_2_match_reason_1").val("")
-    $("#top_matches_2_match_reason_2").val("")
-    $("#top_matches_2_match_reason_3").val("")
+    $("#top_matches_2_name").val("Tartine Bakery")
+    $("#top_matches_2_description").val("Located right next to the Mission Dolores Park, Tartine Bakery has built its reputation as the best bakery in SF.")
+    $("#top_matches_2_product_match_1").val("speciality wines")
+    $("#top_matches_2_product_match_2").val("croissants")
+    $("#top_matches_2_match_reason_1").val("Tartine Bakery is looking to add pies to their offerings")
+    $("#top_matches_2_match_reason_2").val("Speciality wine will pair well with dinner pies you sell")
+    $("#top_matches_2_match_reason_3").val("Partnering will increase product visibility")
 
     # Match two - seed data
-    $("#top_matches_3_name").val("")
-    $("#top_matches_3_description").val("")
-    $("#top_matches_3_product_match_1").val("")
-    $("#top_matches_3_product_match_2").val("")
-    $("#top_matches_3_match_reason_1").val("")
-    $("#top_matches_3_match_reason_2").val("")
-    $("#top_matches_3_match_reason_3").val("")
+    $("#top_matches_3_name").val("The Flower Girl")
+    $("#top_matches_3_description").val("The Flower Girl has been selling flowers in the Castro for over 25 years. Her flowers can brighten any gloomy day.")
+    $("#top_matches_3_product_match_1").val("flowers")
+    $("#top_matches_3_product_match_2").val("flower vases")
+    $("#top_matches_3_match_reason_1").val("Dessert pies pair well with flowers as gifts")
+    $("#top_matches_3_match_reason_2").val("Increased visibility for both businesses")
+    $("#top_matches_3_match_reason_3").val("Perfect complimentary products for the holidays")
 
-    console.log("Done setting Sweet Inspirations seed data")
+    console.log("Done setting Peasant Pies seed data")
 
 
   $("#fixed-path-2").on "click", ->
