@@ -18,6 +18,7 @@ class StaticController < ApplicationController
 
   def quiz1_name_matches
     if request.get?
+      puts session[:possible_match_name]
       @business_name = session[:business_name]
       @image = "sweet_inspiration.jpg"
       if session[:fixed_path] == 2
@@ -74,7 +75,7 @@ class StaticController < ApplicationController
     if request.post?
       lorem_ipsum = "Lorem ipsum sit amet, consectur adipiscing elit sed do eiusmod tempor inciditunt ut labore et dolore magnum."
 
-      session[:possible_match_name] = default(params["possible_match_name"], "Sweet Inspriations")
+      session[:possible_match_name] = default(params["possible_match_name"], "Sweet Inspirations")
       session[:possible_match_address] = default(params["possible_match_address"], "555 Main Street, San Francisco, CA, 82135")
 
       session[:fixed_path] = 1
@@ -129,7 +130,7 @@ class StaticController < ApplicationController
       reason_2 = "High levels of community involvement"
       reason_3 = "Similar business ideologies"
 
-      session[:possible_match_name] = "Sweet Inspriations" if !session[:possible_match_name]
+      session[:possible_match_name] = "Sweet Inspirations" if !session[:possible_match_name]
       session[:possible_match_address] = "555 Main Street, San Francisco, CA, 82135" if !session[:possible_match_address]
 
       session[:fixed_path] = 1
@@ -162,7 +163,7 @@ class StaticController < ApplicationController
     end
 
     if !session[:quiz_complete] || session[:quiz_complete] < 5
-      session[:business_name] = "Sweet Inspriations" if !session[:business_name]
+      session[:business_name] = "Sweet Inspirations" if !session[:business_name]
       session[:business_match] = "yes" if !session[:business_match]
 
       session[:address] = "123 Main Street, San Francisco, CA, 12345" if !session[:address]
