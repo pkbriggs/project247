@@ -16,21 +16,9 @@
             <span>123 Main Street, San Francisco, CA, 12345</span>
             <span class="distance_to_business">(4.2mi)</span>
           </div>
-          <div class="business_phone_and_email">
-            <div class="phone_info">
-              <i class="fa fa-phone"></i>
-              <span>(555) 123-4567</span>
-            </div>
-
-            <div class="email_info">
-              <i class="fa fa-envelope"></i>
-              <span>email@business.com</span>
-            </div>
+          <div class="contact_button">
+            <a class="button block_element">contact info</a>
           </div>
-        </div>
-
-        <div class="contact_button">
-          <a class="button block_element">contact</a>
         </div>
       </div>
 
@@ -62,6 +50,31 @@
   </div>
 </div>
 
+<div class="hidden_contact_info_container hidden_overlay">
+  <div class="contact_info_card">
+    <i class="fa fa-times"></i>
+
+    <h2 class="serif_header_text no_margin_bottom no_margin_top">Contact Information</h2>
+    <div class="serif_text larger"><%= session["top_matches_#{@match_number}_name"] %></div>
+
+    <div class="business_person_and_phone_and_email">
+      <div class="person_info">
+        <i class="fa fa-user"></i>
+        <span>Elizabeth Star</span>
+      </div>
+
+      <div class="phone_info">
+        <i class="fa fa-phone"></i>
+        <span>(555) 123-4567</span>
+      </div>
+
+      <div class="email_info">
+        <i class="fa fa-envelope"></i>
+        <span>email@business.com</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container spacer_small">
   <!-- Campaign Suggestions -->
