@@ -19,43 +19,39 @@
   <p class="serif_text bigger_font_size">Now could you provide us with some additional background information about your business?</p>
 
   <%= form_tag("/quiz2") do %>
-      <%= label_tag "average_num_daily_customers", "On average, how many customers do you serve per day?", class: "block_element form_label serif_text first_form_input_spacing" %>
-      <%= number_field_tag "average_num_daily_customers", nil, within: 1...100000, class: "input_field quiz_input_field medium_tall_input_field" %>
-
-
-      <%= label_tag "average_num_daily_customers", "How far would you like us to look for potential matches?", class: "block_element form_label serif_text first_form_input_spacing" %>
-      <div>
-        <%= radio_button_tag "average_num_daily_customers", "1" %>
-        <%= label_tag "community_involvement_1", "0-5 miles", class: "radio_button_label" %>
-      </div>
-      <div>
-        <%= radio_button_tag "average_num_daily_customers", "2" %>
-        <%= label_tag "community_involvement_2", "6-15 miles", class: "radio_button_label" %>
-      </div>
-      <div>
-        <%= radio_button_tag "average_num_daily_customers", "3" %>
-        <%= label_tag "community_involvement_3", "16-30 miles", class: "radio_button_label" %>
-      </div>
-      <div>
-        <%= radio_button_tag "average_num_daily_customers", "4" %>
-        <%= label_tag "community_involvement_4", "30+ miles", class: "radio_button_label" %>
-      </div>
-      <div class="small_margin_bottom">
-        <%= radio_button_tag "average_num_daily_customers", "0" %>
-        <%= label_tag "community_involvement_0", "Location is not important to me", class: "radio_button_label" %>
-      </div>
-
-
-
-
-
-
-
       <%= label_tag "most_known_product", "What product are you most known for?", class: "block_element serif_text form_label form_input_spacing" %>
       <%= text_field_tag "most_known_product", nil, class: "input_field quiz_input_field medium_tall_input_field" %>
 
-      <%= label_tag "product_interested_in_selling", "Is there a product/service that you are interested in selling, but don’t already sell? If yes, what product/service?", class: "block_element serif_text form_label form_input_spacing" %>
+      <%= label_tag "product_interested_in_selling", "Is there a product or service that you are interested in selling, but don’t already sell? If yes, what product or service?", class: "block_element serif_text form_label form_input_spacing" %>
       <%= text_field_tag "product_interested_in_selling", nil, class: "input_field quiz_input_field medium_tall_input_field" %>
+
+      <%= label_tag "search_distance", "How far would you like us to look for potential matches?", class: "block_element form_label serif_text form_input_spacing" %>
+      <div>
+        <%= radio_button_tag "search_distance", "1" %>
+        <%= label_tag "search_distance_1", "0-5 miles", class: "radio_button_label" %>
+      </div>
+      <div>
+        <%= radio_button_tag "search_distance", "2" %>
+        <%= label_tag "search_distance_2", "6-15 miles", class: "radio_button_label" %>
+      </div>
+      <div>
+        <%= radio_button_tag "search_distance", "3" %>
+        <%= label_tag "search_distance_3", "16-30 miles", class: "radio_button_label" %>
+      </div>
+      <div>
+        <%= radio_button_tag "search_distance", "4" %>
+        <%= label_tag "search_distance_4", "30+ miles", class: "radio_button_label" %>
+      </div>
+      <div class="small_margin_bottom">
+        <%= radio_button_tag "search_distance", "0" %>
+        <%= label_tag "search_distance_0", "Location is not a concern to me", class: "radio_button_label" %>
+      </div>
+
+      <%= label_tag "product_interested_in_matching_with", "Is there a product or service that you are interested in matching with?", class: "block_element serif_text form_label form_input_spacing" %>
+      <%= text_field_tag "product_interested_in_matching_with", nil, class: "input_field quiz_input_field medium_tall_input_field" %>
+
+      <%= label_tag "new_sources", "Are you looking to change or find new sources for your products such as ingredients or materials?", class: "block_element serif_text form_label form_input_spacing" %>
+      <%= text_field_tag "new_sources", nil, class: "input_field quiz_input_field medium_tall_input_field small_margin_bottom" %>
 
       <%= submit_tag "next", class: "block_element button" %>
   <% end %>

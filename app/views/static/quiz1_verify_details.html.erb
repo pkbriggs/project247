@@ -39,6 +39,29 @@
       <%= label_tag "primary_products", "Primary Products/Services (separate using commas)", class: "block_element serif_text form_label form_input_spacing" %>
       <%= text_field_tag "primary_products", nil, value: primary_products_placeholder, class: "input_field quiz_input_field big_field medium_tall_input_field" %>
 
+      <!-- Average customers per day -->
+      <%= label_tag "average_num_daily_customers", "As a rough estimate, how many customers do you serve per day?", class: "block_element form_label serif_text form_input_spacing" %>
+      <div>
+        <%= radio_button_tag "average_num_daily_customers", "1" %>
+        <%= label_tag "average_num_daily_customers_1", "1-10 customers", class: "radio_button_label" %>
+      </div>
+      <div>
+        <%= radio_button_tag "average_num_daily_customers", "2" %>
+        <%= label_tag "average_num_daily_customers_2", "11-50 customers", class: "radio_button_label" %>
+      </div>
+      <div>
+        <%= radio_button_tag "average_num_daily_customers", "3" %>
+        <%= label_tag "average_num_daily_customers_3", "51-200 customers", class: "radio_button_label" %>
+      </div>
+      <div>
+        <%= radio_button_tag "average_num_daily_customers", "4" %>
+        <%= label_tag "average_num_daily_customers_4", "200+ customers", class: "radio_button_label" %>
+      </div>
+      <div class="small_margin_bottom">
+        <%= radio_button_tag "average_num_daily_customers", "0" %>
+        <%= label_tag "average_num_daily_customers_0", "This does not apply to my business", class: "radio_button_label" %>
+      </div>
+
       <%= submit_tag "next", class: "block_element button" %>
   <% end %>
 </div>
