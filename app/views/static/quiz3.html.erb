@@ -87,6 +87,10 @@
         <%= label_tag "customer_satisfaction_importance_5", "Strongly Agree", class: "radio_button_label" %>
       </div>
 
+      <%= label_tag "trying_to_improve", "Is there anything you are looking to improve?", class: "block_element serif_text form_label form_input_spacing" %>
+      <%= select_tag "trying_to_improve", options_for_select(["employee happiness", "customer satisfaction", "prices", "product quality", "distribution", "lower costs", "increase profit margins", "expand product line", "business visibility", "business reputation", "community involvement"].sort), class: "small_margin_bottom" %>
+
+
       <%= submit_tag "finish", class: "block_element button" %>
   <% end %>
 </div>
