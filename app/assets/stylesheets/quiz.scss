@@ -115,6 +115,10 @@
   }
 }
 
+input[type="submit"] {
+  outline: 0;
+}
+
 .button.big {
   padding: 8px 45px;
   font-size: 1.2em;
