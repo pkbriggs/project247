@@ -19,7 +19,7 @@
   <p class="serif_text bigger_font_size">Now could you provide us with some additional background information about your business?</p>
 
   <%= form_tag("/quiz2") do %>
-      <%= label_tag "most_known_product", "What product or services are you most known for?", class: "block_element serif_text form_label form_input_spacing" %>
+      <%= label_tag "most_known_product", "What product or service are you most known for?", class: "block_element serif_text form_label form_input_spacing" %>
       <%= text_field_tag "most_known_product", nil, class: "input_field quiz_input_field medium_tall_input_field" %>
 
       <%= label_tag "product_interested_in_selling", "Is there a product or service that you are interested in selling, but don’t already sell? If yes, what product or service?", class: "block_element serif_text form_label form_input_spacing" %>
@@ -53,7 +53,7 @@
       <%= label_tag "service_interested_in_matching_with", "Is there a service that you are interested in matching with?", class: "block_element serif_text form_label form_input_spacing" %>
       <%= text_field_tag "service_interested_in_matching_with", nil, class: "input_field quiz_input_field medium_tall_input_field" %>
 
-      <%= label_tag "new_sources", "Are you looking to change or find new sources for your products such as ingredients or materials?", class: "block_element serif_text form_label form_input_spacing" %>
+      <%= label_tag "new_sources", "Are you looking to change or find new sources for your products? (such as ingredients or materials)", class: "block_element serif_text form_label form_input_spacing" %>
       <%= text_field_tag "new_sources", nil, class: "input_field quiz_input_field medium_tall_input_field small_margin_bottom" %>
 
       <%= submit_tag "next", class: "block_element button" %>
