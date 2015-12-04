@@ -13,8 +13,8 @@
           <h1 class="serif_header_text"><%= session["top_matches_#{@match_number}_name"] %></h1>
           <div class="business_address">
             <i class="fa fa-map-marker"></i>
-            <span>123 Main Street, San Francisco, CA, 12345</span>
-            <span class="distance_to_business">(4.2mi)</span>
+            <span class="serif_text">123 Main Street, San Francisco, CA, 12345</span>
+            <span class="serif_text distance_to_business">(4.2mi)</span>
           </div>
           <div class="contact_button">
             <a class="button block_element">contact info</a>
@@ -34,7 +34,7 @@
     <div class="inner_match_popular_products_outer_container">
       <!-- Popular products -->
       <div class="popular_products_container">
-        <h4 class="serif_text popular_products_header">Popular Products</h4>
+        <h4 class="serif_text popular_products_header">Popular Products & Services</h4>
         <ul class="list-inline">
           <li><%= session["top_matches_#{@match_number}_product_match_1"] %></li>
           <li><%= session["top_matches_#{@match_number}_product_match_2"] %></li>
